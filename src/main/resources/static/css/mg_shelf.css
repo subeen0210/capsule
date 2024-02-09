@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* 리스트 컨텐츠 컨테이너 */
+.list-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+/* 리스트 버튼 */
+.go-div {
+/* 	border: 1px solid black; */
+	width: 10%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.go-icon {
+/* 	border: 1px solid black; */
+	width: 100%;
+	height: 15%;
+}
+
+/* 전으로 돌아가기 after객체 */
+.go-prev::after {
+	position: absolute;
+	left: 50%;
+	content: '';
+	width: 50px;
+	height: 50px;
+	border-top: 2.5vh solid #F8EDC7;
+	border-right: 2.5vh solid #F8EDC7;
+	transform: rotate(225deg);
+}
+
+/* 다음으로 가기 after객체 */
+.go-next::after {
+	position: absolute;
+	right: 50%;
+	content: '';
+	width: 50px;
+	height: 50px;
+	border-top: 2.5vh solid #F8EDC7;
+	border-right: 2.5vh solid #F8EDC7;
+	transform: rotate(45deg);
+}
+
+/* 중앙 컨텐츠 박스 */
+.list-content {
+/* 	border: 1px solid black; */
+	width: 80%;
+	height: 100%;
+}
+
+/* 컨텐츠 헤더 */
+.list-header {
+/* 	border: 1px solid black; */
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+}
+
+/* 타이틀 표시 위한 박스 */
+.user-title {
+/* 	border: 1px solid black; */
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+}
+
+/* 타이틀 폰트 */
+.title-txt {
+/* 	border: 1px solid black; */
+	width: 100%;
+	height: 25%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5%;
+	font-size: 25pt;
+	font-weight: 700;
+}
+
+/* 선반 박스 */
+.shelf {
+	border: 1px solid black;
+	width: 100%;
+	height: 80%;
+}
+
+/* 선반 내 1층 2층 div설정 */
+.shelf>div {
+	border: 1px solid black;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 병 나열해 두는 박스 */
+.glass-line {
+	border: 1px solid black;
+	width: 100%;
+	height: 80%;
+}
+
+/* 병 나무 받침대 */
+.wood-bracket {
+	border: 1px solid black;
+	width: 100%;
+	height: 10%;
+	background-color: #6C4C1C;
+}

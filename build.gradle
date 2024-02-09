@@ -30,6 +30,19 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+	
+			// jsp 구동하기 위함. & jstl
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'jakarta.servlet:jakarta.servlet-api'
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+    
+    // https://mvnrepository.com/artifact/com.oracle.database.security/oraclepki
+	implementation group: 'com.oracle.database.security', name: 'oraclepki', version: '21.5.0.0'
+	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_cert
+	implementation group: 'com.oracle.database.security', name: 'osdt_cert', version: '21.5.0.0'
+	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_core
+	implementation group: 'com.oracle.database.security', name: 'osdt_core', version: '21.5.0.0'
 }
 
 tasks.named('test') {
