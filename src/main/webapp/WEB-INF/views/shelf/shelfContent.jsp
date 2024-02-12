@@ -32,7 +32,7 @@
 				<div class="shelf-top">
 					<div class="glass-line">
 						<c:forEach items="${bottleList}" var="bottle" begin="0" end="3">
-							<div class="bottle-space">
+							<div class="bottle-space" onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 								<img class="bottle-img" src="/img/bottle.png">
 								<div class="bottle-inform">${bottle.b_date }~????-??-??</div>
 							</div>
