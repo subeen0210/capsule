@@ -1,0 +1,43 @@
+테이블생성
+create table shelf (s_no NUMBER(2,0) PRIMARY KEY,
+    u_id VARCHAR2(20 CHAR)
+);
+
+시퀸스생성
+create SEQUENCE shelf_seq;
+
+더미데이터
+insert into shelf values(shelf_seq.nextval, 'mg');
+insert into shelf values(shelf_seq.nextval, 'jh');
+insert into shelf values(shelf_seq.nextval, 'sb');
+insert into shelf values(shelf_seq.nextval, 'rh');
+
+테이블삭제
+drop table shelf CASCADE CONSTRAINTS PURGE;
+시퀀스삭제
+drop SEQUENCE shelf_seq;
+
+create table bottle (b_no NUMBER(2,0) PRIMARY KEY,
+    b_date date,
+    s_no NUMBER(2,0)
+);
+
+create SEQUENCE bottle_seq;
+
+insert into bottle values(bottle_seq.nextval, '2024-2-10', 1);
+insert into bottle values(bottle_seq.nextval, '2024-2-10', 2);
+insert into bottle values(bottle_seq.nextval, '2024-2-10', 3);
+insert into bottle values(bottle_seq.nextval, '2024-2-10', 4);
+
+drop table bottle CASCADE CONSTRAINTS PURGE;
+
+drop SEQUENCE bottle_seq;
+
+최종 join sql문
+
+select * 
+from bottle
+left join shelf
+on bottle.s_no = shelf.s_no
+WHERE shelf.u_id = 'mg'
+ORDER BY bottle.b_no ASC;
