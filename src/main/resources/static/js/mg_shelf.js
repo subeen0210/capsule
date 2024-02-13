@@ -73,3 +73,17 @@ function shelfList(id) {
 	document.body.appendChild(form);
 	form.submit();
 }
+
+function shelfListJson(id) {
+	fetch('/happy-capsule/shelf/list/' + id.value, {
+		method: "Get"
+	})
+		.then(response => response.json())
+		.then(data => {
+			console.log(data)
+		})
+		.catch(error => {
+			console.error('데이터를 가져오는 중 오류 발생:', error);
+		});
+}
+
