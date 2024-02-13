@@ -30,7 +30,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
-// jsp 구동하기 위함. & jstl
+	
+	// jsp 구동하기 위함. & jstl
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	implementation 'jakarta.servlet:jakarta.servlet-api'
 	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
