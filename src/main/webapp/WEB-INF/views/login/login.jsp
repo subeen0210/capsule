@@ -12,7 +12,7 @@
 		<div class="container-inner">
 			<div class="loginBox">
 				<div class="login-img">
-					 <img onclick="location.href='/happy-capsule'" alt="" src="/img/clover.png">
+					 <img onclick="location.href='/happy-capsule'" alt="" src="/img/home.png">
 				</div>
 				<div class="login-input-line" id="login-text">오늘의 행복은 무엇인가요?</div>
 				<div class="login-input-line">
