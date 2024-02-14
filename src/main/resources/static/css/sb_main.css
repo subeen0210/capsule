@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
 @font-face {
-	font-family: 'YeongdeokSea';
-	src: url(font/YeongdeokSea.ttf)
+    font-family: 'KNPSKkomi-Regular00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
 
 body {
 	background-color: #fffcf1;
@@ -26,9 +29,9 @@ body {
 	border: green solid 1px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	font-family: 'YeongdeokSea';
+	font-family: 'KNPSKkomi-Regular00';
 	font-weight: bolder;
-	font-size: 30pt;
+	font-size: 35pt;
 }
 
 #main-bottle{
