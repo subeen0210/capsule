@@ -15,5 +15,8 @@
 		<div> <img id="main-bottle" alt="" src="/img/empty_bottle.png"> </div>
 	</div>
 
+
+<!-- 모달창 코드 -->
+
 </body>
 </html>
