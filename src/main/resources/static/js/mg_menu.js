@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	// 돌아가기 클릭
 	document.querySelector('.go-home-icon').addEventListener("click", function() {
-		location.href = '/happy-capsule/home';
+		location.href = '/happy-capsule/main';
 	})
 });
 

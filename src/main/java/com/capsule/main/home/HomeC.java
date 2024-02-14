@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeC {
 
-	@GetMapping("/home")
+	@GetMapping("/main")
 	public String shelf(Model model) {
 		model.addAttribute("content", "/WEB-INF/views/home/homeContent.jsp");
 		return "home";
 	}
+	
 }
