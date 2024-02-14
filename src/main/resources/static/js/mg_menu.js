@@ -18,8 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	// 돌아가기 클릭
 	document.querySelector('.go-home-icon').addEventListener("click", function() {
+		location.href = '/happy-capsule/home';
+	})
+	
+	// 저금통 만들기 클릭
+	document.querySelector('.go-home-icon').addEventListener("click", function() {
 		location.href = '/happy-capsule/main';
 	})
+	
 });
 
 /// 페이지 주소에 따라 메뉴 폴딩

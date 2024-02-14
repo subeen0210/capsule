@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'YeongdeokSea';
+	src: url(font/YeongdeokSea.ttf)
+}
+
+body {
+	background-color: #fffcf1;
+	margin: 0;
+	width: 80vw;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+.main-container{
+	display: flex;
+}
