@@ -9,8 +9,10 @@
 </head>
 <body>
 
+	
 	<div class="main-container">
-	<div> <img alt="" src="/img/bollte.png"> </div>
+		<div id="main-text">사용자 이름 님의 행복 저금통</div>
+		<div> <img id="main-bottle" alt="" src="/img/empty_bottle.png"> </div>
 	</div>
 
 </body>

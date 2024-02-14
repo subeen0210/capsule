@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /// 페이지 주소에 따라 메뉴 폴딩
 function foldingMenu() {
-	if (window.location.pathname.includes('/home')) {
+	if (window.location.pathname.includes('/main')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
 		document.querySelector('.go-open-icon').style.display = 'none';
-	} else if (window.location.pathname.includes('/shelf')) {
+	} else if (window.location.pathname.includes('/home')) {
 		document.querySelector('.go-list-icon').style.display = 'none';
 		document.querySelector('.do-write').style.display = 'none';
 		document.querySelector('.do-logout').style.display = 'none';

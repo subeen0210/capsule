@@ -7,12 +7,31 @@
 
 body {
 	background-color: #fffcf1;
-	margin: 0;
-	width: 80vw;
-	height: 100vh;
+/* 	margin: 0; */
+/* 	width: 80vw; */
+/* 	height: 100vh; */
 	overflow-x: hidden;
 }
 
 .main-container{
+	border: blue solid 1px;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90vw;
+	margin-top: 50px;
+}
+
+#main-text{
+	border: green solid 1px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-family: 'YeongdeokSea';
+	font-weight: bolder;
+	font-size: 30pt;
+}
+
+#main-bottle{
+	border: red solid 1px;
+	width: 500px;
 }
