@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+/* 글꼴설정 */
+@font-face {
+    font-family: 'KNPSKkomi-Regular00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 전체 공통속성 */
 * {
 	box-sizing: border-box;
@@ -33,33 +41,41 @@
 
 /* 메뉴 리스트 각 div */
 .menu-list {
-	/* 	border: 1px solid black; */
+/* 	border: 1px solid black; */
 	display: flex;
 	width: 100%;
 	height: 20%;
+	justify-content: center;
 }
 
 /* 메뉴 리스트 위 여백 */
 .menu-list:first-child {
-	margin-top: 75%;
+	margin-top: 33%;
 }
 
 /* 메뉴 리스트 아이콘 div박스 */
 .menu-list>div {
 /* 	border: 1px solid black; */
-	width: 50%;
+	width: 60%;
 	height: 50%;
+	display: flex;
+	flex-direction: column;
 }
 
 /* 호버시 마우스 모양 표시 */
 .menu-list>div {
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* 메뉴 아이콘 img */
 .menu-icon {
-	width: 100%;
-	height: 100%;
+	width: 65%;
+	height: 65%;
+	display: flex;
+	justify-content: center;
 }
 
 /* 메뉴 아이콘 txt */
@@ -69,7 +85,9 @@
 	width: 100%;
 	flex-wrap: wrap; 
 	justify-content : center;
+	font-family:'KNPSKkomi-Regular00';
 	font-size: 20pt;
 	text-align: center;
+	margin-top: 15px;
 }
 /*******************************/
