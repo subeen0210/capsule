@@ -19,7 +19,7 @@ public class ShelfC {
 	@Autowired
 	private ShelfDAO sDAO;
 	
-	@GetMapping("/shelf")
+	@GetMapping("/home")
 	public String shelf(Model model) {
 		model.addAttribute("content", "/WEB-INF/views/shelf/shelfContent.jsp");
 		return "home";
