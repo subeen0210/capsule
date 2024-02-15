@@ -20,11 +20,11 @@
 			<div class="go-list menu-list">
 				<div class="go-list-icon">
 					<img class="menu-icon" src="/img/clover.png">
-					<div class="menu-txt">선반으로 가기</div>
+					<div class="menu-txt">선반으로가기</div>
 				</div>
 				<div class="go-home-icon">
 					<img class="menu-icon" src="/img/clover.png">
-					<div class="menu-txt">저금통<br>만들기</div>
+					<div class="menu-txt">저금통만들기</div>
 				</div>
 			</div>
 			<div class="do-write menu-list">
@@ -34,7 +34,7 @@
 				</div>
 				<div class="go-open-icon">
 					<img class="menu-icon" src="/img/clover.png">
-					<div class="menu-txt">저금통<br>열기</div>
+					<div class="menu-txt">저금통열기</div>
 				</div>
 			</div>
 			<div class="do-logout menu-list">
