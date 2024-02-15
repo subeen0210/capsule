@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 public interface LoginMapper {
 
 	@Select("select * from happy_user where u_id = #{u_id}")
-	void checkLogin(String u_id);
+	UserDTO checkLogin(String u_id);
 	
 	@Insert("insert into happy_user values(#{u_id}, #{u_pw}, #{u_email}, #{u_name})")
 	int signUp(UserDTO userDTO);

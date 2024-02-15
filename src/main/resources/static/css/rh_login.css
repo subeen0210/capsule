@@ -106,7 +106,7 @@ body {
 .checkBtn {
 	width: 50px;
 	position: fixed;
-	right: 36%;
+	margin-left: 10px;
 }
 
 /* join 인풋 유효성 검사 red box */
@@ -120,5 +120,4 @@ input:invalid {
 	position: relative;
 	width: 10%;
 	left: 130px;
-}
 }

@@ -37,16 +37,6 @@ body {
 	align-items: center;
 }
 
-#index-memo {
-	width: 150px;
-	transform: rotate(15deg);
-	margin: 5% 0% 2% 0%;
-}
-
-#index-main {
-	font-size: 70pt;
-	font-family: 'YeongdeokSea';
-}
 
 .index-explain {
 	font-size: 15pt;

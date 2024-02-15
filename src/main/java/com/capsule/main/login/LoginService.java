@@ -9,8 +9,21 @@ public class LoginService {
 	@Autowired
 	LoginMapper loginMapper;
 
-	public void checkLogin(String u_id, String u_pw) {
-		loginMapper.checkLogin(u_id);
+	public int checkLogin(String u_id, String u_pw) {
+		String id = loginMapper.checkLogin(u_id).getU_id();
+		String pw = loginMapper.checkLogin(u_id).getU_pw();
+
+		if (u_id.equals(id)) {
+			if (u_pw.equals(pw)) {
+				System.out.println("로그인 성공");
+				return 1;
+			} else {
+				System.out.println("비밀번호 오류");
+				return 0;
+			}
+		}
+		return 0;
+
 	}
 
 	public int signUp(UserDTO userDTO) {
