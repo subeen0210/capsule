@@ -20,14 +20,20 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.querySelector('.go-home-icon').addEventListener("click", function() {
 		location.href = '/happy-capsule/home';
 	})
+	
+	// 저금통 만들기 클릭
+	document.querySelector('.go-home-icon').addEventListener("click", function() {
+		location.href = '/happy-capsule/main';
+	})
+	
 });
 
 /// 페이지 주소에 따라 메뉴 폴딩
 function foldingMenu() {
-	if (window.location.pathname.includes('/home')) {
+	if (window.location.pathname.includes('/main')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
 		document.querySelector('.go-open-icon').style.display = 'none';
-	} else if (window.location.pathname.includes('/shelf')) {
+	} else if (window.location.pathname.includes('/home')) {
 		document.querySelector('.go-list-icon').style.display = 'none';
 		document.querySelector('.do-write').style.display = 'none';
 		document.querySelector('.do-logout').style.display = 'none';
