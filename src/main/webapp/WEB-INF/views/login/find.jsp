@@ -4,8 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>행복 저금통</title>
 <link rel="stylesheet" type="text/css" href="/css/rh_login.css">
+<script type="text/javascript" src="/js/rh_login.js" defer></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="container">

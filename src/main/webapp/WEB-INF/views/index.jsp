@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>행복 저금통</title>
 <link rel="stylesheet" type="text/css" href="/css/rh_index.css">
 <script type="text/javascript" src="/js/rh_index.js" defer></script>
 <script
@@ -20,15 +20,23 @@
 	<div id="container">
 		<div class="container-inner">
 			<div class="slick">
-				<div>
+				<div class="slider-container">
 					<div class="container-div">
-						<img alt="" src="/img/memo_white.png">
+						<img id="index-memo" alt="" src="/img/memo_white.png">
 					</div>
 					<div class="container-div" id="index-main">오늘의 행복을 오랫동안</div>
-					<div class="container-div" id="index-explain">일상에서의 행복을 남겨보세요</div>
+					<div class="container-div index-explain">행복 저금통으로 일상에서의
+						행복을 남겨보세요</div>
 				</div>
-				<div><div class="container-div">행복한 일을 저금해 확인할 수 있어요</div></div>
-				<div><div class="container-div">일정 기간이 지나면 저금해 둔 행복을 확인할 수 있어요</div></div>
+				<div class="slider-container">
+					<div class="container-div">
+						<img alt="" src="/img/index_bottle.png" width="300px">
+					</div>
+					<div class="container-div index-explain">오늘 하루 있었던 행복한 일을 작성해 보관해요</div>
+				</div>
+				<div class="slider-container">
+					<div class="container-div index-explain">일정 기간이 지나면 저금해 둔 행복 저금을 확인할 수 있어요</div>
+				</div>
 			</div>
 			<div id="button-div">
 				<div id="index-login">
