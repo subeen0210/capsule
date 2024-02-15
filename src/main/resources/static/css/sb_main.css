@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 폰트 */
 @font-face {
     font-family: 'KNPSKkomi-Regular00';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
@@ -16,25 +17,27 @@ body {
 	overflow-x: hidden;
 }
 
+/* 전체div */
 .main-container{
 	border: blue solid 1px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 90vw;
-	margin-top: 50px;
 }
 
+/* 글자부분 */
 #main-text{
 	border: green solid 1px;
-	margin-top: 30px;
+	margin-top: 70px;
 	margin-bottom: 30px;
 	font-family: 'KNPSKkomi-Regular00';
 	font-weight: bolder;
-	font-size: 35pt;
+	font-size: 30pt;
 }
 
+/* 유리병 아이콘 */
 #main-bottle{
 	border: red solid 1px;
-	width: 500px;
+	width: 430px;
 }
