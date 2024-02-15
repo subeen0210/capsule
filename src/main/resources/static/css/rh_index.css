@@ -21,7 +21,7 @@ body {
 	align-items: center;
 }
 
-#container-inner {
+.container-inner {
 	width: 80%;
 	display: flex;
 	justify-content: center;
@@ -32,12 +32,15 @@ body {
 
 .container-div {
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.container-div>img {
+#index-memo {
 	width: 150px;
 	transform: rotate(15deg);
-	margin-bottom: 1%;
+	margin: 5% 0% 2% 0%;
 }
 
 #index-main {
@@ -45,12 +48,12 @@ body {
 	font-family: 'YeongdeokSea';
 }
 
-#index-explain {
+.index-explain {
 	font-size: 15pt;
 	margin: 1% 0% 5% 0%;
 }
 
-button {
+#index-button {
 	background: #6C4C1C;
 	color: white;
 	width: 30%;
@@ -69,4 +72,43 @@ button {
 
 button, #index-join:hover {
 	cursor: pointer;
+}
+/* 버튼 두 개 감싸는 div */
+#button-div {
+	width: 100%;
+}
+
+/* 슬라이더 감싸는 div */
+.slider-container{
+	margin-top: 1%;
+}
+
+/* 슬라이더 */
+.slick {
+	width: 100%;
+}
+
+.slick-arrow {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+}
+
+.slick-prev {
+	left: 7%;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	background-color: #ffffff00;
+	border: 2px solid black;
+}
+
+.slick-next {
+	right: 7%;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	background-color: #ffffff00;
+	border: 2px solid black;
 }

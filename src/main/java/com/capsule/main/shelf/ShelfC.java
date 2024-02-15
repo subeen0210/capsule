@@ -28,7 +28,6 @@ public class ShelfC {
 	
 	@PostMapping("/shelf/list")
 	public String list(@RequestParam("id") String id, Model model) {
-		System.out.println(sDAO.getShelfList(id));
 		model.addAttribute("bottleList", sDAO.getShelfList(id));
 		model.addAttribute("content", "/WEB-INF/views/shelf/shelfContent.jsp");
 		return "home";

@@ -6,33 +6,46 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="/css/rh_login.css">
+<script type="text/javascript" src="/js/rh_login.js" defer></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="container-inner">
-			<div class="loginBox">
-				<div class="login-input-line" id="join-text">회원가입</div>
-				<div id="join-input-box">
-					<div>
-						<input class="login-input" placeholder="아이디">
+			<form action="/happy-capsule/join" method="post">
+				<div class="loginBox">
+					<div class="login-input-line" id="join-text">회원가입</div>
+					<div id="join-input-box">
+						<div class="login-input-box">
+							<input id="u_id" name="u_id" class="login-input"
+								placeholder="아이디(영문 및 숫자, 최대 20자)" maxlength="20" pattern="[A-Za-z0-9]+">
+							<button type="button" id="checkIdBtn" class="checkBtn">중복 검사</button>
+							<div class="checkText" id="checkIdText"></div>
+						</div>
+						<div class="login-input-box">
+							<input type="password" id="u_pw" name="u_pw" class="login-input"
+								placeholder="비밀번호(최대 20자)" maxlength="20" pattern="[A-Za-z0-9]+">
+						</div>
+						<div class="login-input-box">
+							<input type="email" id="u_email" name="u_email"
+								class="login-input" placeholder="이메일">
+								<button type="button" id="checkMailBtn" class="checkBtn">중복 검사</button>
+							<div class="checkText" id="checkMailText"></div>
+						</div>
+						<div class="login-input-box">
+							<input name="u_name" class="login-input" placeholder="닉네임" maxlength="20">
+						</div>
 					</div>
-					<div style="display: none;">dd</div>
-					<div>
-						<input class="login-input" placeholder="비밀번호">
+					<div class="login-input-line">
+						<button id="joinBtn" class="login-button">JOIN</button>
 					</div>
-						<div>
-						<input class="login-input" placeholder="이메일">
-					</div>
-						<div>
-						<input class="login-input" placeholder="닉네임">
-					</div>
-					
 				</div>
-				<div class="login-input-line">
-					<button class="login-button" onclick="">JOIN</button>
-				</div>
+			</form>
 
-			</div>
+
+
+
 		</div>
 	</div>
 
