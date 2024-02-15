@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 	foldingMenu();
 
-	// 보러가기 클릭
+	// 리스트 클릭
 	document.querySelector('.go-list-icon').addEventListener("click", function() {
-		location.href = '/happy-capsule/home';
+		location.href = '/happy-capsule/shelf';
 	})
 
 	// 작성하기 클릭
@@ -18,13 +18,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// 돌아가기 클릭
 	document.querySelector('.go-home-icon').addEventListener("click", function() {
-		location.href = '/happy-capsule/home';
+		location.href = '/happy-capsule/shelf';
 	})
 
 	// 저금통 만들기 클릭
 	document.querySelector('.go-home-icon').addEventListener("click", function() {
 		location.href = '/happy-capsule/main';
 	})
+
+		// 저금통 열기 클릭
+		document.querySelector('.go-open-icon').addEventListener("click", function() {
+			var pathSegments = window.location.pathname.split('/');
+    		var no = pathSegments[pathSegments.length - 1];
+			location.href = '/happy-capsule/open/' + no;
+		})
 	
 });
 
@@ -44,6 +51,6 @@ function foldingMenu() {
 		document.querySelector('.do-logout').style.display = 'none';
 	} else if (window.location.pathname.includes('/bottle')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
-		document.querySelector('.go-open-icon').style.display = 'none';
+		document.querySelector('.go-write-icon').style.display = 'none';
 	}
 }

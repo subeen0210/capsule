@@ -12,7 +12,7 @@ public interface BottleMapper {
     
     
         
-    @Select("select * from bottle left join shelf on bottle.s_no = shelf.s_no WHERE shelf.u_id = #{id} ORDER BY bottle.b_no ASC")
+    @Select("select * from bottle where b_no={no}")
 	BottleDTO getBottle(int no);
 
 }

@@ -33,7 +33,7 @@
 					<div class="menu-txt">작성하기</div>
 				</div>
 				<div class="go-open-icon">
-					<img class="menu-icon" src="/img/clover.png">
+					<img class="menu-icon" src="/img/memo_white.png">
 					<div class="menu-txt">저금통열기</div>
 				</div>
 			</div>

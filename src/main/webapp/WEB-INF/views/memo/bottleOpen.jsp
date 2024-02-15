@@ -11,7 +11,7 @@
 <body>
 	<div class="main-container">
 		<div id="main-text">사용자 이름 님의 행복 저금통</div>
-		<div> <img id="main-bottle" alt="" src="/img/bottle.png"> </div>
+		<div> <img id="main-bottle" alt="" src="/img/memo_white.png"> </div>
 	</div>
 
 </body>
