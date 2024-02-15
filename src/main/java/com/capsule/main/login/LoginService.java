@@ -1,6 +1,5 @@
 package com.capsule.main.login;
 
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,21 +7,23 @@ import org.springframework.stereotype.Service;
 public class LoginService {
 
 	@Autowired
-	private SqlSession ss;
-
-	@Autowired
 	LoginMapper loginMapper;
 
-	public void checkLogin(UserDTO userDTO) {
+	public void checkLogin(String u_id, String u_pw) {
+		loginMapper.checkLogin(u_id);
+	}
+
+	public int signUp(UserDTO userDTO) {
+		return loginMapper.signUp(userDTO);
+	}
+
+	public UserDTO checkID(String u_id) {
+		return loginMapper.checkID(u_id);
 
 	}
 
-	public void signUp(UserDTO userDTO) {
-		if (loginMapper.signUp(userDTO) == 1) {
-			System.out.println("가입 성공");
-		}
-		;
-
+	public UserDTO checkMail(String u_email) {
+		return loginMapper.checkMail(u_email);
 	}
 
 }

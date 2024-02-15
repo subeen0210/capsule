@@ -19,12 +19,12 @@
 						src="/img/home.png">
 				</div>
 				<div class="login-input-line" id="login-text">오늘의 행복은 무엇인가요?</div>
-				<form action="/happy-capsule/login" method="post">
+				<form method="post" class="login-input-line">
 					<div class="login-input-line">
 						<div class="login-input-box">
 							<input name="u_id" class="login-input" placeholder="아이디">
 						</div>
-						<div>
+						<div class="login-input-box">
 							<input name="u_pw" class="login-input" placeholder="비밀번호">
 						</div>
 					</div>
