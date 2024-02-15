@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 });
 
-/// 페이지 주소에 따라 메뉴 폴딩
+// 페이지 주소에 따라 메뉴 폴딩
 function foldingMenu() {
 	if (window.location.pathname.includes('/main')) {
 		document.querySelector('.go-home-icon').style.display = 'none';

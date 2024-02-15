@@ -76,7 +76,7 @@ function shelfList(id) {
 
 function shelfListJson(id) {
 	fetch('/happy-capsule/shelf/list/' + id.value, {
-		method: "GET"
+		method: "POST"
 	})
 		.then(response => response.json())
 		.then(data => {
