@@ -39,7 +39,7 @@
 			</div>
 			<div class="do-logout menu-list">
 				<div class="do-logout-icon">
-					<img class="menu-icon" src="/img/clover.png">
+					<img class="menu-icon" src="/img/door.png">
 					<div class="menu-txt">로그아웃</div>
 				</div>
 			</div>
