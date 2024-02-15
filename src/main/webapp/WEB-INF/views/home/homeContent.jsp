@@ -6,17 +6,26 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="/css/sb_main.css">
+<link rel="stylesheet" type="text/css" href="/css/sb_modal.css">
 </head>
 <body>
 
-	
+
 	<div class="main-container">
 		<div id="main-text">사용자 이름 님의 행복 저금통</div>
-		<div> <img id="main-bottle" alt="" src="/img/empty_bottle.png"> </div>
+		<div>
+			<img id="main-bottle" alt="" src="/img/empty_bottle.png">
+		</div>
 	</div>
 
 
-<!-- 모달창 코드 -->
+	<!-- 모달창 코드 -->
+
+	<div class="modal-container">
+		<div class="modal-body">
+			<div></div>
+		</div>
+	</div>
 
 </body>
 </html>

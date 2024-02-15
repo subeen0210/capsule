@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'KNPSKkomi-Regular00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.modal-container{
+	border: blue solid 1px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(200, 204, 204, 0.5);
+}
+
+.modal-body{
+	border: green solid 1px;
+	width: 750px;
+	height: 500px;
+	margin: auto;
+	border-radius: 10px;
+	background-color: #FDFAE9;
+}
