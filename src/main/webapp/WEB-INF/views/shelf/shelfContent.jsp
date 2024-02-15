@@ -36,9 +36,11 @@
 				<div class="shelf-top">
 					<div class="glass-line">
 						<c:forEach items="${bottleList}" var="bottle" begin="0" end="3">
-							<div class="bottle-space" onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
+							<div class="bottle-space"
+								onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 								<img class="bottle-img" src="/img/bottle.png">
-								<div class="bottle-inform">${bottle.b_date }~????-??-??</div>
+								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+								<img class="bottle-inform infrom-img" src="/img/label.png">
 							</div>
 						</c:forEach>
 					</div>
@@ -49,7 +51,8 @@
 						<c:forEach items="${bottleList}" var="bottle" begin="4" end="7">
 							<div class="bottle-space">
 								<img class="bottle-img" src="/img/bottle.png">
-								<div class="bottle-inform">${bottle.b_date }~????-??-??</div>
+								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+								<img class="bottle-inform infrom-img" src="/img/label.png">
 							</div>
 						</c:forEach>
 					</div>
@@ -66,7 +69,8 @@
 									begin="${status.index * 8}" end="${status.index * 8 + 3}">
 									<div class="bottle-space">
 										<img class="bottle-img" src="/img/bottle.png">
-										<div class="bottle-inform">${bottle.b_date }~????-??-??</div>
+										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+										<img class="bottle-inform infrom-img" src="/img/label.png">
 									</div>
 								</c:forEach>
 							</div>
@@ -78,7 +82,8 @@
 									begin="${status.index * 8 + 4}" end="${status.index * 8 + 7}">
 									<div class="bottle-space">
 										<img class="bottle-img" src="/img/bottle.png">
-										<div class="bottle-inform">${bottle.b_date }~????-??-??</div>
+										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+										<img class="bottle-inform infrom-img" src="/img/label.png">
 									</div>
 								</c:forEach>
 							</div>
