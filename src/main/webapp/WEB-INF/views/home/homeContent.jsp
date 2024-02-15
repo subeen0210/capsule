@@ -23,7 +23,16 @@
 
 	<div class="modal-container">
 		<div class="modal-body">
-			<div></div>
+			<div id="modal-cancle"> <span id="cancle-botton">X</span> </div>
+			<div class="modal-top">
+			<div class="modal-title">오늘의 행복 키워드:<input id="modal-title"></div>
+			<div class="modal-date">날짜:<input type="date" id="modal-date"></div>
+			</div>
+			<div class="modal-img-show"><span id="modal-img-show">사진</span></div>
+			<div class="modal-img"> <input type="file" id="file-upload"> </div>
+			<div class="modal-textarea"> <input> </div>
+			<div> <button>행복 등록</button> </div>
+			
 		</div>
 	</div>
 
