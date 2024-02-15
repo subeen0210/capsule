@@ -152,16 +152,20 @@
 
 /* 유리병 설명 텍스트 */
 .bottle-inform {
-	border: 1px solid black;
+/* 	border: 1px solid black; */
 	width: 40%;
 	height: 20%;
 	top: 50%;
 	display: flex;
-	background: #FFF;
 	position: absolute;
 	font-size: 15pt;
+	justify-content: center;
 	text-align: center;
 	align-items: center;
+}
+
+.inform-txt {
+	z-index: 1;
 }
 
 /* 병 나무 받침대 */

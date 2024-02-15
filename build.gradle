@@ -39,11 +39,12 @@ dependencies {
 
 	//oracle cloud
 	// https://mvnrepository.com/artifact/com.oracle.database.security/oraclepki
-	implementation group: 'com.oracle.database.security', name: 'oraclepki', version: '21.5.0.0'
+	implementation 'com.oracle.database.security:oraclepki:21.5.0.0'
 	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_cert
-	implementation group: 'com.oracle.database.security', name: 'osdt_cert', version: '21.5.0.0'
+	implementation 'com.oracle.database.security:osdt_cert:21.5.0.0'
 	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_core
-	implementation group: 'com.oracle.database.security', name: 'osdt_core', version: '21.5.0.0'
+	implementation 'com.oracle.database.security:osdt_core:21.5.0.0'
+
 }
 
 tasks.named('test') {
