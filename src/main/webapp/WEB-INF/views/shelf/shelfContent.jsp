@@ -44,7 +44,7 @@
 							</div>
 						</c:forEach>
 					</div>
-					<div class="wood-bracket"></div>
+					<img class="wood-bracket" src="/img/shelf11.png">
 				</div>
 				<div class="shelf-bottom">
 					<div class="glass-line">
@@ -56,7 +56,7 @@
 							</div>
 						</c:forEach>
 					</div>
-					<div class="wood-bracket"></div>
+					<img class="wood-bracket" src="/img/shelf11.png">
 				</div>
 			</div>
 			<c:if test="${bottleList.size() / 8 > 1}">
@@ -74,7 +74,7 @@
 									</div>
 								</c:forEach>
 							</div>
-							<div class="wood-bracket"></div>
+							<img class="wood-bracket" src="/img/shelf11.png">
 						</div>
 						<div class="shelf-bottom">
 							<div class="glass-line">
@@ -87,7 +87,7 @@
 									</div>
 								</c:forEach>
 							</div>
-							<div class="wood-bracket"></div>
+							<img class="wood-bracket" src="/img/shelf11.png">
 						</div>
 					</div>
 				</c:forEach>
