@@ -22,7 +22,7 @@
 .modal-body{
 	border: green solid 1px;
 	width: 750px;
-	height: 500px;
+	height: auto;
 	margin: auto;
 	border-radius: 10px;
 	background-color: #FDFAE9;
@@ -93,6 +93,8 @@
 
 #modal-img-show{
 	border: green solid 1px;
+	width: 300px;
+	height: 300px;
 }
 
 
@@ -131,6 +133,7 @@ textarea{
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #modal-btn{
@@ -138,11 +141,18 @@ textarea{
 	height: 50px;
 	cursor: pointer;
 	background: #6C4C1C;
-	border: #6C4C1C solid 1px;
+	border: none;
 	border-radius: 10px;
 	font-family: 'KNPSKkomi-Regular00';
 	font-size: 25px;
 	text-align: center;
 	line-height: 50px;
 	color: #FDFAE9;
+}
+
+#modal-btn:hover {
+	color: #6C4C1C;
+	background: #FDFAE9;
+	border: #6C4C1C solid 2px;
+	transition: background-color 0.3s, color 0.3s;
 }

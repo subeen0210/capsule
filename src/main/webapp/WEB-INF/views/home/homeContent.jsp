@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="/css/sb_main.css">
 <link rel="stylesheet" type="text/css" href="/css/sb_modal.css">
+<link rel="stylesheet" type="text/css" href="/css/sb_main.css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 	<!-- 모달창 코드 -->
 
 	<div class="modal-container">
-		<form action="">
+		<form action="/happy-capsule/write">
 		<div class="modal-body">
 			<div id="modal-cancle"> <span id="cancle-botton">X</span> </div>
 			<div class="modal-top">
@@ -33,7 +33,6 @@
 			<div class="modal-img"> <input type="file" id="file-upload"> </div>
 			<div class="modal-textarea"> <textarea placeholder="250자 이내로 입력"></textarea> </div>
 			<div class="modal-button"> <button id="modal-btn">행복 등록</button> </div>
-			
 		</div>
 		</form>
 	</div>
