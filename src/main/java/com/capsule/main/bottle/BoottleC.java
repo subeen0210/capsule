@@ -22,4 +22,6 @@ public class BoottleC  {
 		model.addAttribute("content", "/WEB-INF/views/bottle/bottleContent.jsp");
 		return "home";
 	}
+
+	
 }

@@ -25,7 +25,7 @@
 						<img style="width:150px; transform: rotate(15deg);
 	margin: 5% 0% 2% 0%;" id="index-memo" alt="" src="/img/memo_white.png">
 					</div>
-					<div class="container-div" id="index-main" style="    font-size: 70pt;
+					<div class="container-div" id="index-main" style="font-size: 70pt;
     font-family: 'YeongdeokSea';">오늘의 행복을 오랫동안</div>
 					<div class="container-div index-explain">행복 저금통으로 일상에서의
 						행복을 남겨보세요</div>

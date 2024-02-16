@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	shelfLeft = document.querySelector('.shelf-paging-1').getBoundingClientRect().left;
 	shelfRight = document.querySelector('.shelf-paging-1').getBoundingClientRect().right;
 
-	document.querySelector('.shelf-paging-1').style.left = shelfLeft + 'px';
+//	document.querySelector('.shelf-paging-1').style.left = shelfLeft + 'px';
 
 	if (document.querySelector('.list-content').lastElementChild.classList[1].slice(-1) == 1) {
 		document.querySelectorAll('.go-icon').forEach(function(e) {
