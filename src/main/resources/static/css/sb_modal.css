@@ -22,7 +22,7 @@
 .modal-body{
 	border: green solid 1px;
 	width: 750px;
-	height: 500px;
+	height: auto;
 	margin: auto;
 	border-radius: 10px;
 	background-color: #FDFAE9;
@@ -41,16 +41,19 @@
 	height: 23px;
 	border-radius: 3px;
 	background-color: white;
-	border: #6C4C1C solid 1px;
+/* 	border: #6C4C1C solid 1px; */
 	text-align: center;
 	font-size: 11pt;
 	color: #848484;
+	cursor: pointer;
 }
 
 .modal-top{
 	border: blue solid 1px;
 	display: flex;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 20px;
@@ -58,20 +61,27 @@
 
 .modal-title{
 	font-family: 'KNPSKkomi-Regular00';
-	font-size: 25pt;
+	font-size: 20pt;
 }
 
-#model-title{
-	background-color: white;
-	border: #848484 solid 1px;
+#modal-title-input{
+	background: white;
+	border: #6C4C1C solid 1px;
+	border-radius: 5px;
     width: 300px;
-    height: 40px;
+    height: 45px;
     margin-left: 10px;
+	font-family: 'KNPSKkomi-Regular00';
+	font-size: 15pt;
 }
 
 .modal-date{
 	font-family: 'KNPSKkomi-Regular00';
-	font-size: 25pt;
+	font-size: 20pt;
+}
+
+#modal-date-input{
+	margin-left: 10px;
 }
 
 .modal-img-show{
@@ -83,6 +93,8 @@
 
 #modal-img-show{
 	border: green solid 1px;
+	width: 300px;
+	height: 300px;
 }
 
 
@@ -101,4 +113,46 @@
 .modal-textarea{
 	display: flex;
 	justify-content: center;
+}
+
+textarea{
+	margin-top:20px;
+	width: 95%;
+	height: 150px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: solid 2px #6C4C1C;
+	border-radius: 5px;
+	font-family: 'KNPSKkomi-Regular00';
+	font-size: 20px;
+	resize: both;
+}
+		
+.modal-button{
+	border: blue solid 1px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#modal-btn{
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	background: #6C4C1C;
+	border: none;
+	border-radius: 10px;
+	font-family: 'KNPSKkomi-Regular00';
+	font-size: 25px;
+	text-align: center;
+	line-height: 50px;
+	color: #FDFAE9;
+}
+
+#modal-btn:hover {
+	color: #6C4C1C;
+	background: #FDFAE9;
+	border: #6C4C1C solid 2px;
+	transition: background-color 0.3s, color 0.3s;
 }
