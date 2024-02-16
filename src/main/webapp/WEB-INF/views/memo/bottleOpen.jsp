@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>ﾟ
 <link rel="stylesheet" type="text/css" href="/css/mg_menu.css">
-<link rel="stylesheet" type="text/css" href="/css/sb_main.css">
+<link rel="stylesheet" type="text/css" href="/css/jh_memo.css">
 </head>
 <body>
 	<div class="main-container">
@@ -16,7 +16,7 @@
 		
 		
 		<c:forEach items="${memoList}" var="memo">
-			<div> <img id="main-bottle" alt="" src="/img/memo_white.png"> </div>
+			<div> <img id="main-memo" alt="" src="/img/memo_white.png"> </div>
 		</c:forEach>
 
 		
