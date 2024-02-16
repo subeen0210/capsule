@@ -19,9 +19,10 @@ public class MemoC {
     @GetMapping("/open/{no}")
 	public String bottleOpen(Model model, @PathVariable("no") int no) {
 		model.addAttribute("content", "/WEB-INF/views/memo/bottleOpen.jsp");
-        System.out.println(mDAO.getMemoList(no));
+        model.addAttribute("memoList", mDAO.getMemoList(no));
 
 		return "home";
 	}
+
     
 }
