@@ -32,7 +32,7 @@
 			<div class="modal-img-show"><span id="modal-img-show">사진</span></div>
 			<div class="modal-img"> <input type="file" id="file-upload"> </div>
 			<div class="modal-textarea"> <textarea placeholder="250자 이내로 입력"></textarea> </div>
-			<div class="modal-button"> <button>행복 등록</button> </div>
+			<div class="modal-button"> <button id="modal-btn">행복 등록</button> </div>
 			
 		</div>
 		</form>
