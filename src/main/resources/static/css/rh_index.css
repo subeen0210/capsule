@@ -37,7 +37,6 @@ body {
 	align-items: center;
 }
 
-
 .index-explain {
 	font-size: 15pt;
 	margin: 1% 0% 5% 0%;
@@ -69,7 +68,7 @@ button, #index-join:hover {
 }
 
 /* 슬라이더 감싸는 div */
-.slider-container{
+.slider-container {
 	margin-top: 1%;
 }
 
@@ -91,7 +90,7 @@ button, #index-join:hover {
 	width: 40px;
 	height: 40px;
 	background-color: #ffffff00;
-	border: 2px solid black;
+	border: 3px solid black;
 }
 
 .slick-next {
@@ -100,5 +99,11 @@ button, #index-join:hover {
 	width: 40px;
 	height: 40px;
 	background-color: #ffffff00;
-	border: 2px solid black;
+	border: 3px solid black;
+}
+
+.slider-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
