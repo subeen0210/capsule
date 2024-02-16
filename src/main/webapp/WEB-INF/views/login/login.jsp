@@ -19,30 +19,26 @@
 						src="/img/home.png">
 				</div>
 				<div class="login-input-line" id="login-text">오늘의 행복은 무엇인가요?</div>
-				<form action="login" method="post"
-					class="login-input-line">
+				<form action="login" method="post" class="login-input-line">
 					<div class="login-input-line">
 						<div class="login-input-box">
 							<input name="u_id" class="login-input" placeholder="아이디">
 						</div>
 						<div class="login-input-box">
-							<input type="password" name="u_pw" class="login-input" placeholder="비밀번호">
+							<input type="password" name="u_pw" class="login-input"
+								placeholder="비밀번호">
 						</div>
 					</div>
 					<div class="login-input-line">
-						<button class="login-button">LOGIN</button>
+						<button type="button" class="login-button">LOGIN</button>
 					</div>
 				</form>
 				<div id="find-user">
 					<span onclick="location.href='/happy-capsule/login/find'">아이디/비밀번호
 						찾기</span>
 				</div>
-
 			</div>
 		</div>
 	</div>
-
-
-
 </body>
 </html>
