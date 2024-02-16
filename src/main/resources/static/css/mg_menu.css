@@ -71,8 +71,7 @@
 
 /* 메뉴 아이콘 img */
 .menu-icon {
-	width: 30%;
-	height: 30%;
+	width: 33%;
 	display: flex;
 	justify-content: center;
 }

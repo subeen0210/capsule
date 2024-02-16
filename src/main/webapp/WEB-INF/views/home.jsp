@@ -12,7 +12,7 @@
 	<div class="container">
 		<!-- 콘텐츠 인클루드 -->
 		<div class="content">
-					<jsp:include page="${content }"></jsp:include>
+			<jsp:include page="${content }"></jsp:include>
 		</div>
 
 		<!-- 메뉴바 -->

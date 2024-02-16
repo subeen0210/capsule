@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import jakarta.servlet.http.HttpSession;
+
 @RequestMapping("/happy-capsule")
 @Controller
 public class ShelfC {
@@ -20,15 +22,24 @@ public class ShelfC {
 	@Autowired
 	private ShelfDAO sDAO;
 	
+	@Autowired
+	private HttpSession hs;
+	
 	@GetMapping("/shelf")
 	public String shelf(Model model) {
+//		hs.setAttribute("user", "ran");
+//		System.out.println(hs.getAttribute("user"));
+		String id = (String) hs.getAttribute("user");
+//		System.out.println(id);
+		model.addAttribute("bottleList", sDAO.getShelfList(id));
 		model.addAttribute("content", "/WEB-INF/views/shelf/shelfContent.jsp");
 		return "home";
 	}
 	
 	@PostMapping("/shelf/list")
-	public String list(@RequestParam("id") String id, Model model) {
-		model.addAttribute("bottleList", sDAO.getShelfList(id));
+	public String list(@RequestParam("id") String id, Model model, HttpSession hs) {
+		
+		System.out.println(hs.getAttribute("user")); 
 		model.addAttribute("content", "/WEB-INF/views/shelf/shelfContent.jsp");
 		return "home";
 	}
