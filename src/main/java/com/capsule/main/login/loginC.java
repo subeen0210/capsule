@@ -2,6 +2,7 @@ package com.capsule.main.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,13 +26,14 @@ public class loginC {
 	// 로그인 로직 수행
 	// 유저가 입력한 값이 일치하는지 확인
 	// 일치 시 메인 홈으로 이동
+	@ResponseBody
 	@PostMapping("/login")
-	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs) {
+	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs, Model model) {
 		if (loginService.checkLogin(u_id, u_pw,hs) == 1) {
-			return "redirect:/happy-capsule/shelf";
+			return "1";
 		} else {
 			System.out.println("로그인 실패");
-			return "redirect:/happy-capsule/login";
+			return "0";
 		}
 	}
 
