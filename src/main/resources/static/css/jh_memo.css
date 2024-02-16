@@ -26,6 +26,19 @@ body {
 	width: 100%;
 }
 
+.open{
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img{
+
+    margin: 0 2% 0 2%;
+
+}
+
 /* 글자부분 */
 #main-text{
 	border: green solid 1px;

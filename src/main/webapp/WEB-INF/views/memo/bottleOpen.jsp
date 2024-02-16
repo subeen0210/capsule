@@ -14,10 +14,11 @@
 		<div id="main-text">사용자 이름 님의 행복 저금통</div>
 		
 		
-		
+		<div class="open">
 		<c:forEach items="${memoList}" var="memo">
-			<div> <img id="main-memo" alt="" src="/img/memo_white.png"> </div>
+			<div class="img"> <img id="main-memo" alt="" src="/img/memo_white.png"> </div>
 		</c:forEach>
+		</div>
 
 		
 	</div>
