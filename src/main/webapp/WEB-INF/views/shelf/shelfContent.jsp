@@ -20,14 +20,14 @@
 		<div class="list-content">
 			<div class="list-header">
 				<div class="user-title">
-					<button onclick="shelfList(this)" value="mg">mg</button>
-					<button onclick="shelfList(this)" value="jh">jh</button>
-					<button onclick="shelfList(this)" value="sb">sb</button>
-					<button onclick="shelfList(this)" value="rh">rh</button>
-					<button onclick="shelfListJson(this)" value="mg">mg.json</button>
-					<button onclick="shelfListJson(this)" value="jh">jh.json</button>
-					<button onclick="shelfListJson(this)" value="sb">sb.json</button>
-					<button onclick="shelfListJson(this)" value="rh">rh.json</button>
+<!-- 					<button onclick="shelfList(this)" value="ran">ran</button> -->
+<!-- 					<button onclick="shelfList(this)" value="jh">jh</button> -->
+<!-- 					<button onclick="shelfList(this)" value="sb">sb</button> -->
+<!-- 					<button onclick="shelfList(this)" value="rh">rh</button> -->
+<!-- 					<button onclick="shelfListJson(this)" value="mg">mg.json</button> -->
+<!-- 					<button onclick="shelfListJson(this)" value="jh">jh.json</button> -->
+<!-- 					<button onclick="shelfListJson(this)" value="sb">sb.json</button> -->
+<!-- 					<button onclick="shelfListJson(this)" value="rh">rh.json</button> -->
 					<!-- 					<div class="title-txt">ㅇㅇㅇ님의 행복 저금통</div> -->
 					<div class="title-txt">${bottleList[0].u_id }님의행복저금통</div>
 				</div>
