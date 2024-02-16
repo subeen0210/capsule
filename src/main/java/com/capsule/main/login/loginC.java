@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import jakarta.servlet.http.HttpSession;
+
 @RequestMapping("/happy-capsule")
 @Controller
 public class loginC {
@@ -24,9 +26,9 @@ public class loginC {
 	// 유저가 입력한 값이 일치하는지 확인
 	// 일치 시 메인 홈으로 이동
 	@PostMapping("/login")
-	public String login(@RequestParam String u_id, @RequestParam String u_pw) {
-		if (loginService.checkLogin(u_id, u_pw) == 1) {
-			return "redirect:/happy-capsule/home";
+	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs) {
+		if (loginService.checkLogin(u_id, u_pw,hs) == 1) {
+			return "redirect:/happy-capsule/shelf";
 		} else {
 			System.out.println("로그인 실패");
 			return "redirect:/happy-capsule/login";
