@@ -22,18 +22,20 @@
 	<!-- 모달창 코드 -->
 
 	<div class="modal-container">
+		<form action="">
 		<div class="modal-body">
 			<div id="modal-cancle"> <span id="cancle-botton">X</span> </div>
 			<div class="modal-top">
-			<div class="modal-title">오늘의 행복 키워드:<input id="modal-title"></div>
-			<div class="modal-date">날짜:<input type="date" id="modal-date"></div>
+			<div class="modal-title">오늘의 행복 키워드:<input id="modal-title-input" placeholder="100자 이내로 입력"></div>
+			<div class="modal-date">날짜:<input type="date" id="modal-date-input"></div>
 			</div>
 			<div class="modal-img-show"><span id="modal-img-show">사진</span></div>
 			<div class="modal-img"> <input type="file" id="file-upload"> </div>
-			<div class="modal-textarea"> <input> </div>
-			<div> <button>행복 등록</button> </div>
+			<div class="modal-textarea"> <textarea placeholder="250자 이내로 입력"></textarea> </div>
+			<div class="modal-button"> <button>행복 등록</button> </div>
 			
 		</div>
+		</form>
 	</div>
 
 </body>
