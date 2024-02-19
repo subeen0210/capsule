@@ -29,13 +29,13 @@ $(function() {
 				console.log(data);
 				if (data == "") {
 					isIdChecked = true;
-					$("#checkIdText").text("사용 가능");
+					$("#checkIdText").text("사용 가능한 ID");
 					$("#checkIdText").css("color", "blue");
 					$("#u_id").css("border", "1px solid rgb(108, 76, 28)").css("background-color", "white")
 					e.target.value = 1;
 				} else {
 					isIdChecked = false;
-					$("#checkIdText").text("사용 불가");
+					$("#checkIdText").text("사용 불가한 ID");
 					$("#checkIdText").css("color", "red");
 					$("#u_id").css("border", "2px solid #f03232").css("background-color", "#ff00000d")
 					return;

@@ -120,6 +120,7 @@ input:invalid {
 /* check Text 위치용 */
 .checkText {
 	position: relative;
-	width: 10.5%;
-	left: 130px;
+    width: 200px;
+    left: 130px;
+    text-align: left;
 }
