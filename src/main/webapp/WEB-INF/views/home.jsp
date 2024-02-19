@@ -53,7 +53,7 @@
 	<!-- 모달창 코드 -->
 
 	<div class="modal-container">
-		<form action="/happy-capsule/write">
+		<form action="/happy-capsule/write" method="post" enctype="multipart/form-data">
 			<div class="modal-body">
 				<div id="modal-cancle">
 					<span id="cancle-botton">X</span>
