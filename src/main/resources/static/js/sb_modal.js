@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 // 모달창 띄우기와 끄기 
 document.addEventListener("DOMContentLoaded", function() {
 	// 작성하기 아이콘과 텍스트 요소를 가져옴
-//	console.log(11);
+	//	console.log(11);
 	let modalOverlay = document.querySelector('.modal-overlay');
 	let writeIcon = document.querySelector(".go-write-icon");
 	let writeText = document.querySelector(".menu-txt");
