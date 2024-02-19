@@ -33,6 +33,7 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	border-radius: 30px;
+	justify-content: center;
 }
 
 /* 로그인 input을 감싸는 div */
@@ -61,10 +62,6 @@ body {
 /* login input을 감싸는 박스 */
 .login-input-box {
 	margin-bottom: 3%;
-}
-/* find input을 감싸는 박스 */
-.find-input-box {
-	margin: 3% 0% 0% 0%;
 }
 
 /* input 속성 */
@@ -108,7 +105,7 @@ body {
 	width: 50px;
 	position: fixed;
 	margin-left: 10px;
-	    margin-top: 5px;
+	margin-top: 5px;
 }
 
 /* join 인풋 유효성 검사 red box */
@@ -120,7 +117,32 @@ input:invalid {
 /* check Text 위치용 */
 .checkText {
 	position: relative;
-    width: 200px;
-    left: 130px;
-    text-align: left;
+	width: 200px;
+	left: 130px;
+	text-align: left;
+}
+
+/* find result div */
+#find-result {
+	display: none;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.find-bold {
+	font-weight: bold;
+}
+/* find input을 감싸는 박스 */
+.find-input-box {
+	margin: 3% 0% 0% 0%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#find-text {
+	margin-bottom: 15%;
+	font-weight: bold;
 }

@@ -3,7 +3,7 @@ var checkKorean = /[ㄱ-ㅎㅏ-ㅣ]/gi;
 
 
 function checkEmail(u_email) {
-	let pattern_email = /^[a-zA-Z0-9._-]{4,20}@(naver|ruu|hanmail|kakao|hot|gmail|outlook|nate|daum|icloud|mac|me)\.[a-zA-Z]{2,4}$/i;
+	let pattern_email = /^[a-zA-Z0-9._-]+@(naver|hanmail|kakao|hot|gmail|outlook|nate|daum|icloud|mac|me)\.[a-zA-Z]{2,4}$/i
 	if (pattern_email.test(u_email)) {
 		// 이메일 패턴이 일치하면 true
 		return true;
@@ -27,12 +27,16 @@ $(function() {
 			type: "get",
 			success: function(data) {
 				console.log(data);
-				if (data == "") {
-					isIdChecked = true;
-					$("#checkIdText").text("사용 가능한 ID");
-					$("#checkIdText").css("color", "blue");
-					$("#u_id").css("border", "1px solid rgb(108, 76, 28)").css("background-color", "white")
-					e.target.value = 1;
+				if (data == "") { // db에 값이 없을 때 == 사용 가능한 ID일 때
+					if (u_id === "") { // id input empty인지 먼저 확인
+						alert("필수 입력 정보를 모두 작성해 주시기 바랍니다.")
+					} else { // empty가 아닐 시 사용 가능하다고 띄워주고 button 값을 1로 변경
+						isIdChecked = true; 
+						$("#checkIdText").text("사용 가능한 ID");
+						$("#checkIdText").css("color", "blue");
+						$("#u_id").css("border", "1px solid rgb(108, 76, 28)").css("background-color", "white")
+						e.target.value = 1;
+					}
 				} else {
 					isIdChecked = false;
 					$("#checkIdText").text("사용 불가한 ID");
@@ -54,22 +58,29 @@ $(function() {
 			success: function(data) {
 				console.log(data);
 				if (data == "") {
-					isEmailChecked = true;
-					$("#checkMailText").text("사용 가능한 이메일 주소");
-					$("#checkMailText").css("color", "blue");
-					$("#u_email").css("border", "1px solid rgb(108, 76, 28)").css("background-color", "white")
-					e.target.value = 1;
+					if (u_email === "") {
+						alert("필수 입력 정보를 모두 작성해 주시기 바랍니다.")
+					} else {
+						if (checkEmail(u_email)) {
+							isEmailChecked = true;
+							$("#checkMailText").text("사용 가능한 이메일 주소");
+							$("#checkMailText").css("color", "blue");
+							$("#u_email").css("border", "1px solid rgb(108, 76, 28)").css("background-color", "white")
+							e.target.value = 1;
+						} else {
+							$("#checkMailText").text("유효하지 않은 이메일 주소");
+							$("#checkMailText").css("color", "red");
+							$("#u_email").css("border", "2px solid #f03232").css("background-color", "#ff00000d")
+						}
+					}
 
 				} else {
 					isEmailChecked = false;
-					$("#checkMailText").text("유효하지 않은 이메일 주소");
+					$("#checkMailText").text("중복된 이메일 주소");
 					$("#checkMailText").css("color", "red");
 					$("#u_email").css("border", "2px solid #f03232").css("background-color", "#ff00000d")
-					$("#u_email").focus();
-
 				}
-
-			},
+			}
 		});
 	});
 
