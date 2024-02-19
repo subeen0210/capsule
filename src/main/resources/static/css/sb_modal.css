@@ -25,24 +25,23 @@
 
 /* 모달창 css */
 .modal-container {
-	position: absolute;
-	display: none;
-	top: 50px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100vw;
-	height: 100vh;
-	z-index: 1000;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px; /* 모달의 너비 */
+    height: auto;
+    z-index: 1000;
 }
 
-
 .modal-body {
-	border: green solid 1px;
-	width: 750px;
-	height: auto;
-	margin: auto;
-	border-radius: 10px;
-	background-color: #FDFAE9;
+    border: green solid 1px;
+    width: 100%; /* 부모 요소인 .modal-container의 너비에 따라 자동으로 조정 */
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #FDFAE9;
 }
 
 #modal-cancle {
