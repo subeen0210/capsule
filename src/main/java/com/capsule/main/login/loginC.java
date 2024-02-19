@@ -32,7 +32,6 @@ public class loginC {
 		if (loginService.checkLogin(u_id, u_pw, hs) == 1) {
 			return "1";
 		} else {
-			System.out.println("로그인 실패");
 			return "0";
 		}
 	}
@@ -40,6 +39,14 @@ public class loginC {
 	@GetMapping("/login/find")
 	public String findUser() {
 		return "login/find";
+	}
+
+	// 이메일로 ID/PW 찾기
+	@ResponseBody
+	@PostMapping("/login/find")
+	public UserDTO findUser(@RequestParam String u_email, Model model) {
+		UserDTO findUser = loginService.checkMail(u_email);
+		return findUser;
 	}
 
 	@GetMapping("/join")

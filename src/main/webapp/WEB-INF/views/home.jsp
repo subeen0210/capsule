@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>행복 저금통</title>
 <link rel="stylesheet" type="text/css" href="/css/mg_menu.css">
 <link rel="stylesheet" type="text/css" href="/css/sb_modal.css">
 <script type="text/javascript" src="/js/mg_menu.js"></script>
