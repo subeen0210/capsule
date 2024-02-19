@@ -6,11 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		location.href = '/happy-capsule/shelf';
 	})
 
-	// 작성하기 클릭
-	document.querySelector('.go-write-icon').addEventListener("click", function() {
-		console.log(2);
-	})
-
 	// 로그아웃 클릭
 	document.querySelector('.do-logout-icon').addEventListener("click", function() {
 		console.log(3);
