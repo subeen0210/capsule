@@ -10,6 +10,7 @@ $(function() {
             success: function(response) {
                 if (response === '1') {
                     // 로그인 성공 시 shelf 페이지로 리다이렉트
+                    alert("로그인 성공")
                     window.location.href = '/happy-capsule/shelf';
                 } else {
                     // 로그인 실패 시 alert 창 표시
