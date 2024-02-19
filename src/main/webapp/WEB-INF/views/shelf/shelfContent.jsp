@@ -20,16 +20,16 @@
 		<div class="list-content">
 			<div class="list-header">
 				<div class="user-title">
-<!-- 					<button onclick="shelfList(this)" value="ran">ran</button> -->
-<!-- 					<button onclick="shelfList(this)" value="jh">jh</button> -->
-<!-- 					<button onclick="shelfList(this)" value="sb">sb</button> -->
-<!-- 					<button onclick="shelfList(this)" value="rh">rh</button> -->
-<!-- 					<button onclick="shelfListJson(this)" value="mg">mg.json</button> -->
-<!-- 					<button onclick="shelfListJson(this)" value="jh">jh.json</button> -->
-<!-- 					<button onclick="shelfListJson(this)" value="sb">sb.json</button> -->
-<!-- 					<button onclick="shelfListJson(this)" value="rh">rh.json</button> -->
+					<!-- 					<button onclick="shelfList(this)" value="ran">ran</button> -->
+					<!-- 					<button onclick="shelfList(this)" value="jh">jh</button> -->
+					<!-- 					<button onclick="shelfList(this)" value="sb">sb</button> -->
+					<!-- 					<button onclick="shelfList(this)" value="rh">rh</button> -->
+					<!-- 					<button onclick="shelfListJson(this)" value="mg">mg.json</button> -->
+					<!-- 					<button onclick="shelfListJson(this)" value="jh">jh.json</button> -->
+					<!-- 					<button onclick="shelfListJson(this)" value="sb">sb.json</button> -->
+					<!-- 					<button onclick="shelfListJson(this)" value="rh">rh.json</button> -->
 					<!-- 					<div class="title-txt">ㅇㅇㅇ님의 행복 저금통</div> -->
-					<div class="title-txt">${bottleList[0].u_id }님의행복저금통</div>
+					<div class="title-txt">${user.u_name }님의행복저금통</div>
 				</div>
 			</div>
 			<div class="shelf shelf-paging-1">
@@ -39,24 +39,30 @@
 							<div class="bottle-space"
 								onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 								<img class="bottle-img" src="/img/bottle.png">
-								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+								</div>
 								<img class="bottle-inform infrom-img" src="/img/label.png">
 							</div>
 						</c:forEach>
 					</div>
-					<img class="wood-bracket" src="/img/shelf11.png">
+					<div class="wood-bracket-box">
+						<img class="wood-bracket" src="/img/shelf11.png">
+					</div>
 				</div>
 				<div class="shelf-bottom">
 					<div class="glass-line">
 						<c:forEach items="${bottleList}" var="bottle" begin="4" end="7">
 							<div class="bottle-space">
 								<img class="bottle-img" src="/img/bottle.png">
-								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+								</div>
 								<img class="bottle-inform infrom-img" src="/img/label.png">
 							</div>
 						</c:forEach>
 					</div>
-					<img class="wood-bracket" src="/img/shelf11.png">
+					<div class="wood-bracket-box">
+						<img class="wood-bracket" src="/img/shelf11.png">
+					</div>
 				</div>
 			</div>
 			<c:if test="${bottleList.size() / 8 > 1}">
@@ -69,12 +75,15 @@
 									begin="${status.index * 8}" end="${status.index * 8 + 3}">
 									<div class="bottle-space">
 										<img class="bottle-img" src="/img/bottle.png">
-										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+										</div>
 										<img class="bottle-inform infrom-img" src="/img/label.png">
 									</div>
 								</c:forEach>
 							</div>
-							<img class="wood-bracket" src="/img/shelf11.png">
+							<div class="wood-bracket-box">
+								<img class="wood-bracket" src="/img/shelf11.png">
+							</div>
 						</div>
 						<div class="shelf-bottom">
 							<div class="glass-line">
@@ -82,12 +91,15 @@
 									begin="${status.index * 8 + 4}" end="${status.index * 8 + 7}">
 									<div class="bottle-space">
 										<img class="bottle-img" src="/img/bottle.png">
-										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??</div>
+										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+										</div>
 										<img class="bottle-inform infrom-img" src="/img/label.png">
 									</div>
 								</c:forEach>
 							</div>
-							<img class="wood-bracket" src="/img/shelf11.png">
+							<div class="wood-bracket-box">
+								<img class="wood-bracket" src="/img/shelf11.png">
+							</div>
 						</div>
 					</div>
 				</c:forEach>

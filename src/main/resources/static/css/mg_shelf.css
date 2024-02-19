@@ -99,7 +99,8 @@
 	width: 50%;
 	height: 100%;
 	display: flex;
-	align-items: flex-end;
+	margin-top: 2%;
+/* 	align-items: center; */
 }
 
 /* 타이틀 폰트 */
@@ -120,7 +121,11 @@
 	width: 80%;
 	height: 90%;
 	position: absolute;
-	transition: all 0.75s ease-in-out;
+	transition: all 3s ease-in-out;
+}
+ 
+.added-shelf {
+	transition: all 3s ease-in-out;
 }
 
 /* 선반 내 1층 2층 div설정 */
@@ -138,12 +143,13 @@
 	width: 100%;
 	height: 80%;
 	display: flex;
+	justify-content: center;
 }
 
 /* 병 한개 공간 */
 .bottle-space {
 /* 	border: 1px solid black; */
-	width: 25%;
+	width: 20%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -154,7 +160,7 @@
 /* 병 이미지 크기 */
 .bottle-img {
 /* 	border: 1px solid black; */
-	height: 100%;
+	height: 80%;
 }
 
 /* 유리병 설명 텍스트 */
@@ -162,7 +168,7 @@
 /* 	border: 1px solid black; */
 	width: 40%;
 	height: 20%;
-	top: 40%;
+	top: 50%;
 	display: flex;
 	position: absolute;
 	font-size: 15pt;
@@ -172,13 +178,21 @@
 	font-family: 'KNPSKkomi-Regular00';
 }
 
+/* 병 스티커 */
 .inform-txt {
 	z-index: 1;
-	top: 40.5%;
+	top: 51%;
+}
+
+/* 병 나무 받침대 div */
+.wood-bracket-box {
+/* 	border: 1px solid black; */
+	display: flex;
+	justify-content: center;
 }
 
 /* 병 나무 받침대 */
 .wood-bracket {
 /* 	border: 1px solid black; */
-	width: 100%;
+	width: 80%;
 }
