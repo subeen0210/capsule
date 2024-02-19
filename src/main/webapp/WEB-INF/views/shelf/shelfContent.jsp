@@ -52,7 +52,7 @@
 				<div class="shelf-bottom">
 					<div class="glass-line">
 						<c:forEach items="${bottleList}" var="bottle" begin="4" end="7">
-							<div class="bottle-space">
+							<div class="bottle-space" onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 								<img class="bottle-img" src="/img/bottle.png">
 								<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
 								</div>
@@ -73,7 +73,7 @@
 							<div class="glass-line">
 								<c:forEach items="${bottleList}" var="bottle"
 									begin="${status.index * 8}" end="${status.index * 8 + 3}">
-									<div class="bottle-space">
+									<div class="bottle-space" onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 										<img class="bottle-img" src="/img/bottle.png">
 										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
 										</div>
@@ -89,7 +89,7 @@
 							<div class="glass-line">
 								<c:forEach items="${bottleList}" var="bottle"
 									begin="${status.index * 8 + 4}" end="${status.index * 8 + 7}">
-									<div class="bottle-space">
+									<div class="bottle-space" onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 										<img class="bottle-img" src="/img/bottle.png">
 										<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
 										</div>
