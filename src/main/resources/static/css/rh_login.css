@@ -26,7 +26,7 @@ body {
 	border: 3px solid #6C4C1C;
 	border-radius: 30px;
 	width: 100%;
-	height: 600px;
+	height: 35vw;
 	background: white;
 	display: flex;
 	text-align: center;
@@ -71,7 +71,7 @@ body {
 	width: 60%;
 	height: 50px;
 	text-align: center;
-	font-size: 15pt;
+	font-size: 13pt;
 }
 
 /* 버튼 속성 */
@@ -145,4 +145,9 @@ input:invalid {
 #find-text {
 	margin-bottom: 15%;
 	font-weight: bold;
+}
+
+/* 로그인으로 돌아가는 부분 */
+#backLogin{
+	margin-top: 1.2%;
 }

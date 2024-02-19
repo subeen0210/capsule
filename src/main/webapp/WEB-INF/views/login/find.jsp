@@ -36,6 +36,7 @@
 				</div>
 				<div class="login-input-line">
 					<button type="submit" id="findBtn" class="login-button">CHECK</button>
+					<div id="backLogin" onclick="location.href='/happy-capsule/login'">로그인으로 돌아가기</div>
 				</div>
 
 			</div>
