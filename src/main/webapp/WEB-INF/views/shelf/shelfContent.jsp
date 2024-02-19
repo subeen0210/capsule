@@ -13,7 +13,7 @@
 <body>
 	<div class="list-container">
 		<div class="go-prev go-div">
-			<div class="go-icon">
+			<div class="go-icon prev-icon">
 				<div class="click-prev-icon click-icon"></div>
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 			</c:if>
 		</div>
 		<div class="go-next go-div">
-			<div class="go-icon">
+			<div class="go-icon next-icon">
 				<div class="click-next-icon click-icon"></div>
 			</div>
 		</div>
