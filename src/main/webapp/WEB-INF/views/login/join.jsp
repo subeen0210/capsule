@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>행복 저금통</title>
 <link rel="stylesheet" type="text/css" href="/css/rh_login.css">
 <script type="text/javascript" src="/js/rh_join.js" defer></script>
 <script
@@ -13,14 +13,14 @@
 <body>
 	<div class="container">
 		<div class="container-inner">
-			<form action="/happy-capsule/join" method="post">
+			<form id="join-form" action="/happy-capsule/join" method="post">
 				<div class="loginBox">
 					<div class="login-input-line" id="join-text">회원가입</div>
 					<div id="join-input-box">
 						<div class="login-input-box">
 							<input id="u_id" name="u_id" class="login-input"
 								placeholder="아이디(영문 및 숫자, 최대 20자)" maxlength="20" pattern="[A-Za-z0-9]+">
-							<button type="button" id="checkIdBtn" class="checkBtn">중복 검사</button>
+							<button type="button" id="checkIdBtn" class="checkBtn" value="0">중복 검사</button>
 							<div class="checkText" id="checkIdText"></div>
 						</div>
 						<div class="login-input-box">
@@ -30,11 +30,11 @@
 						<div class="login-input-box">
 							<input type="email" id="u_email" name="u_email"
 								class="login-input" placeholder="이메일">
-								<button type="button" id="checkMailBtn" class="checkBtn">중복 검사</button>
+								<button type="button" id="checkMailBtn" class="checkBtn" value="0">중복 검사</button>
 							<div class="checkText" id="checkMailText"></div>
 						</div>
 						<div class="login-input-box">
-							<input name="u_name" class="login-input" placeholder="닉네임" maxlength="20">
+							<input id="u_name" name="u_name" class="login-input" placeholder="닉네임" maxlength="20">
 						</div>
 					</div>
 					<div class="login-input-line">

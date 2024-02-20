@@ -29,10 +29,9 @@ public class loginC {
 	@ResponseBody
 	@PostMapping("/login")
 	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs, Model model) {
-		if (loginService.checkLogin(u_id, u_pw,hs) == 1) {
+		if (loginService.checkLogin(u_id, u_pw, hs) == 1) {
 			return "1";
 		} else {
-			System.out.println("로그인 실패");
 			return "0";
 		}
 	}
@@ -42,6 +41,14 @@ public class loginC {
 		return "login/find";
 	}
 
+	// 이메일로 ID/PW 찾기
+	@ResponseBody
+	@PostMapping("/login/find")
+	public UserDTO findUser(@RequestParam String u_email, Model model) {
+		UserDTO findUser = loginService.checkMail(u_email);
+		return findUser;
+	}
+
 	@GetMapping("/join")
 	public String goJoin() {
 		return "login/join";
@@ -49,6 +56,7 @@ public class loginC {
 
 	// 회원가입하는 로직
 	// insert해 주고 login 페이지로 이동
+	// DTO가 null일 땐 join 페이지에 머물기
 	@PostMapping("/join")
 	public String join(UserDTO userDTO) {
 		loginService.signUp(userDTO);

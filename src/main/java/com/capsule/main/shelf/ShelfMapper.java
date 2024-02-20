@@ -9,6 +9,6 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface ShelfMapper {
 	
-	@Select("select * from bottle left join shelf on bottle.s_no = shelf.s_no WHERE shelf.u_id = #{id} ORDER BY bottle.b_no ASC")
-	List<ShelfDTO> getShelfList(String id);
+	@Select("SELECT * FROM happy_bottle WHERE u_id = (SELECT u_id FROM happy_user WHERE u_id = #{id}) ORDER BY b_no ASC")
+	List<ShelfDTO> getShelfList(@Param("id") String id);
 }
