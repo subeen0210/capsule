@@ -50,7 +50,7 @@ body {
 }
 
 /* 유리병 아이콘 */
-#main-memo{
+.main-memo{
 	border: red solid 1px;
 	width: 80px;
 }

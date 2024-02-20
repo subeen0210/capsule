@@ -12,7 +12,7 @@ public interface BottleMapper {
     
     
         
-    @Select("select * from bottle where b_no={no}")
+    @Select("select * from happy_bottle where b_no=#{no}")
 	BottleDTO getBottle(int no);
 
 }

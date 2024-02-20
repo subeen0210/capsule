@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class BottleDTO {
     private int b_no;
-	private int s_no;
+	private String u_id; 
 	private Date b_date;
-	private int m_no;
 }

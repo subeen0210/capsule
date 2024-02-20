@@ -13,6 +13,12 @@ public class MemoDAO {
 	private MemoMapper mMapper;
 
 	public List<MemoDTO> getMemoList(int no) {
+		System.out.println(no);
 		return mMapper.getMemoList(no);
+	}
+
+	public MemoDTO openMemo(int no) {
+		
+		return mMapper.openMemo(no);
 	}
 }

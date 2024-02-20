@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class MemoDTO {
+    private int b_no;
     private int m_no;
 	private Date m_date;
     private String m_keyword;
