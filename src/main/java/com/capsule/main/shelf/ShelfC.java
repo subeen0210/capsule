@@ -22,15 +22,15 @@ public class ShelfC {
 	@Autowired
 	private ShelfDAO sDAO;
 	
-	@Autowired
-	private HttpSession hs;
+	// @Autowired
+	// private HttpSession hs;
 	
 	@GetMapping("/shelf")
-	public String shelf(Model model) {
+	public String shelf(Model model, HttpSession hs) {
 //		hs.setAttribute("user", "ran");
 //		System.out.println(hs.getAttribute("user"));
 		String id = (String) hs.getAttribute("user");
-//		System.out.println(id);
+		System.out.println(id);
 		model.addAttribute("bottleList", sDAO.getShelfList(id));
 		model.addAttribute("content", "/WEB-INF/views/shelf/shelfContent.jsp");
 		return "home";
