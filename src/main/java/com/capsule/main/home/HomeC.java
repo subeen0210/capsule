@@ -1,11 +1,17 @@
 package com.capsule.main.home;
 
+import java.io.File;
+
+import org.eclipse.tags.shaded.org.apache.bcel.classfile.Field;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.capsule.main.login.UserDTO;
 import com.capsule.main.memo.MemoDAO;
@@ -38,5 +44,13 @@ public class HomeC {
 //		mDAO.insertMemo(multiDTO, hs);
 //		return "redirect:/happy-capsule/main";
 //	}
+	
+	@PostMapping("/write")
+	public String insertMemo(@RequestPart MultipartFile file) {
+		String originalFileName = file.getOriginalFilename();
+		File path = new File("/webapp/WEB-INF/views/imgFile" + originalFileName);
+		
+		return "redirect:/happy-capsule/main";
+	}
 	
 }
