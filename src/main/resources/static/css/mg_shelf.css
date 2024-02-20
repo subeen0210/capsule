@@ -2,10 +2,12 @@
 
 /* 폰트 */
 @font-face {
-    font-family: 'KNPSKkomi-Regular00';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'KNPSKkomi-Regular00';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * {
@@ -17,12 +19,12 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-/* 	overflow: hidden; */
+	/* 	overflow: hidden; */
 }
 
 /* 리스트 버튼 */
 .go-div {
-/* 		border: 1px solid black; */
+	/* 		border: 1px solid black; */
 	width: 10%;
 	height: 100%;
 	display: flex;
@@ -30,11 +32,11 @@
 }
 
 .go-icon {
-/* 		border: 1px solid black; */
+	/* 		border: 1px solid black; */
 	width: 100%;
 	height: 15%;
 	display: flex;
-/* 	justify-content: center; */
+	/* 	justify-content: center; */
 	align-items: center;
 }
 
@@ -43,7 +45,7 @@
 }
 
 .click-prev-icon {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	width: 60px;
 	height: 100px;
 	position: relative;
@@ -69,7 +71,7 @@
 }
 
 .click-next-icon {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	width: 60px;
 	height: 100px;
 	position: relative;
@@ -113,7 +115,7 @@
 	height: 100%;
 	display: flex;
 	margin-top: 2%;
-/* 	align-items: center; */
+	/* 	align-items: center; */
 }
 
 /* 타이틀 폰트 */
@@ -130,41 +132,47 @@
 
 /* 선반 박스 */
 .shelf {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	width: 80%;
 	height: 90%;
 	position: absolute;
-	transition : all 0.75s ease-in-out;
+	transition: all 0.75s ease-in-out;
 }
 
 /* 두번째 부터 선반 */
 .added-shelf {
 	left: 100vw;
 }
- 
+
 /* 선반 내 1층 2층 div설정 */
 .shelf>div {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	width: 100%;
 	height: 47.5%;
 	display: flex;
-	flex-direction: column;
+	/* 	flex-direction: column; */
+	flex-wrap: wrap;
 }
 
 /* 병 나열해 두는 박스 */
 .glass-line {
-/* 	border: 1px solid black; */
-	width: 80%;
+	/* 	border: 1px solid black; */
+	width: 100%;
 	height: 80%;
 	display: flex;
-	margin-left: 14%;
-/* 	justify-content: center; */
+	justify-content: center;
+}
+
+.glass-inner {
+	width: 65%;
+	height: 100%;
+	display: flex;
 }
 
 /* 병 한개 공간 */
 .bottle-space {
-/* 	border: 1px solid black; */
-	width: 22.5%;
+	/* 	border: 1px solid black; */
+	width: 25%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -174,14 +182,14 @@
 
 /* 병 이미지 크기 */
 .bottle-img {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	height: 80%;
 }
 
 /* 유리병 설명 텍스트 */
 .bottle-inform {
-/* 	border: 1px solid black; */
-	width: 40%;
+	/* 	border: 1px solid black; */
+	width: 50%;
 	height: 20%;
 	top: 50%;
 	display: flex;
@@ -201,13 +209,13 @@
 
 /* 병 나무 받침대 div */
 .wood-bracket-box {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	display: flex;
 	justify-content: center;
 }
 
 /* 병 나무 받침대 */
 .wood-bracket {
-/* 	border: 1px solid black; */
+	/* 	border: 1px solid black; */
 	width: 80%;
 }
