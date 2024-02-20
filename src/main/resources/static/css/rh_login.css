@@ -151,3 +151,7 @@ input:invalid {
 #backLogin{
 	margin-top: 1.2%;
 }
+
+input:focus{
+	outline:none;
+}
