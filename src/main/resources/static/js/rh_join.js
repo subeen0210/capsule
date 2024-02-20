@@ -31,7 +31,7 @@ $(function() {
 					if (u_id === "") { // id input empty인지 먼저 확인
 						alert("필수 입력 정보를 모두 작성해 주시기 바랍니다.")
 					} else { // empty가 아닐 시 사용 가능하다고 띄워주고 button 값을 1로 변경
-						isIdChecked = true; 
+						isIdChecked = true;
 						$("#checkIdText").text("사용 가능한 ID");
 						$("#checkIdText").css("color", "blue");
 						$("#u_id").css("border", "1px solid rgb(108, 76, 28)").css("background-color", "white")
