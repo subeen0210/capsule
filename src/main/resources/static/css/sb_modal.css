@@ -36,7 +36,7 @@
 }
 
 .modal-body {
-    border: green solid 1px;
+/*     border: green solid 1px; */
     width: 100%; 
     height: auto;
     margin: auto;
