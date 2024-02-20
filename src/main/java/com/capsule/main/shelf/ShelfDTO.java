@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class ShelfDTO {
-	private int s_no;
 	private String u_id;
 	private int b_no;
 	private Date b_date;

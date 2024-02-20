@@ -23,9 +23,13 @@ public class ShelfC {
 
 	@Autowired
 	private ShelfDAO sDAO;
-	
+
 	@Autowired
 	private HttpSession hs;
+
+	
+	// @Autowired
+	// private HttpSession hs;
 	
 	@GetMapping("/shelf")
 	public String shelf(Model model) {
