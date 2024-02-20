@@ -157,14 +157,14 @@
 	width: 80%;
 	height: 80%;
 	display: flex;
-	margin-left: 10%;
+	margin-left: 14%;
 /* 	justify-content: center; */
 }
 
 /* 병 한개 공간 */
 .bottle-space {
 /* 	border: 1px solid black; */
-	width: 25%;
+	width: 22.5%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
