@@ -44,3 +44,33 @@ document.addEventListener("DOMContentLoaded", function() {
 	})
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.querySelector("#modal-btn").addEventListener("click", (e) => {
+		const form = e.target.closest('form');
+		console.log(form)
+		// FormData 객체 생성
+		const formData = new FormData(form);
+
+		// FormData 객체를 이용하여 입력된 값들을 가져옴
+		for (let [key, value] of formData.entries()) {
+			console.log(key + ': ' + value);
+		}
+		try {
+			const response = fetch('/happy-capsule/write/0', {
+				method: 'POST',
+				body: formData
+			});
+
+			if (!response.ok) {
+				throw new Error('서버 응답이 실패했습니다.');
+			}
+
+			console.log('데이터가 성공적으로 서버로 전송되었습니다.');
+		} catch (error) {
+			console.error('오류가 발생했습니다:', error.message);
+		}
+
+	})
+});

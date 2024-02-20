@@ -53,14 +53,14 @@
 	<!-- 모달창 코드 -->
 
 	<div class="modal-container">
-		<form action="/happy-capsule/write" method="post" enctype="multipart/form-data">
+		<form action="/happy-capsule/write">
 			<div class="modal-body">
 				<div id="modal-cancle">
 					<span id="cancle-botton">X</span>
 				</div>
 				<div class="modal-top">
 					<div class="modal-title">
-						오늘의 행복 키워드:<input id="modal-title-input" placeholder="100자 이내로 입력">
+						오늘의 행복 키워드:<input id="modal-title-input" name="m_keyword" placeholder="100자 이내로 입력">
 					</div>
 					<div class="modal-date">
 						<div id="modal-date-input"></div>
@@ -77,13 +77,13 @@
 					</c:otherwise>
 				</c:choose>
 				<div class="modal-img">
-					<input type="file" id="file-upload">
+					<input type="file" name="m_file" id="file-upload">
 				</div>
 				<div class="modal-textarea">
-					<textarea placeholder="250자 이내로 입력"></textarea>
+					<textarea placeholder="250자 이내로 입력" name="m_text"></textarea>
 				</div>
 				<div class="modal-button">
-					<button id="modal-btn">행복 등록</button>
+					<button type="button" id="modal-btn">행복 등록</button>
 				</div>
 			</div>
 		</form>
