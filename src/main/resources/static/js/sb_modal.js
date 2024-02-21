@@ -42,5 +42,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		modal.style.display = 'none';
 		modalOverlay.style.display = 'none';
 	})
+	
+	
+	document.querySelector('#modal-btn').addEventListener("click", (e)=>{
+		const form = e.target.closest('form');		
+		console.log(form);
 
+		 const formData = new FormData(form);
+		 for(const val of formData.values()){
+			 console.log(val);
+		 }
+		 
+		 fetch("/happy-capsule/write", {
+			 method : 'POST',
+			 body : formData
+		 })
+		 .then(response => {
+			 console.log(response);
+		 })
+		
+	});
+	
+	
+	
 });

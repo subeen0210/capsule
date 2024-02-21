@@ -17,41 +17,41 @@ body {
 }
 
 .container-inner {
-	width: 35%;
+	position: relative;
+	border: 3px solid #6C4C1C;
+	background: white;
+	border-radius: 30px;
+	width: 33%;
 	height: 60%;
+	display: flex;
+	align-items: center;
 }
 
 /* 로그인 전체 박스 */
 .loginBox {
-	border: 3px solid #6C4C1C;
-	border-radius: 30px;
 	width: 100%;
-	height: 35vw;
-	background: white;
 	display: flex;
 	text-align: center;
 	flex-wrap: wrap;
 	align-items: center;
-	border-radius: 30px;
 	justify-content: center;
 }
 
 /* 로그인 input을 감싸는 div */
 .login-input-line {
 	width: 100%;
-}
-/* 아이콘 자리 */
-.login-img {
-	width: 100%;
-	text-align: left;
+	margin-top: 5%;
 }
 
-.login-img>img {
+.homeImg {
 	width: 40px;
-	margin-left: 3%;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 
-.login-button, .login-img>img, #find-user>span:hover {
+.checkBtn, .homeImg, #backLogin, #find-user, .login-button, .login-img>img, #find-user>span:hover
+	{
 	cursor: pointer;
 }
 /* 로그인 문구 */
@@ -73,6 +73,10 @@ body {
 	text-align: center;
 	font-size: 13pt;
 }
+/* login input을 감싸는 container */
+#login-input-container{
+margin: 10% 0%;	
+}
 
 /* 버튼 속성 */
 .login-button {
@@ -82,16 +86,18 @@ body {
 	height: 50px;
 	border-radius: 50px;
 	font-size: 15pt;
-	margin-top: 3%;
 }
 
+/* login에서 id/pw 찾기 */
 #find-user {
 	width: 100%;
-	margin-top: -15%;
+	margin: 1% 0%;
 }
+
 /* 회원가입 문구 */
 #join-text {
 	font-size: 25pt;
+
 }
 /* 회원가입 input을 감싸는 박스 */
 #join-input-box {
@@ -141,6 +147,11 @@ input:invalid {
 	display: flex;
 	justify-content: center;
 }
+/* 이메일 적는 칸, 결과 보여주는 카 */
+.find-form{
+	width: 100%;
+    margin: 15% 0%;
+}
 
 #find-text {
 	margin-bottom: 15%;
@@ -148,6 +159,11 @@ input:invalid {
 }
 
 /* 로그인으로 돌아가는 부분 */
-#backLogin{
+#backLogin {
 	margin-top: 1.2%;
+}
+
+/* input창 focus 됐을 때 생기는 outline 없앰 */
+input:focus {
+	outline: none;
 }

@@ -29,6 +29,7 @@ public class loginC {
 	@ResponseBody
 	@PostMapping("/login")
 	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs, Model model) {
+		System.out.print(u_id+u_pw);
 		if (loginService.checkLogin(u_id, u_pw, hs) == 1) {
 			return "1";
 		} else {
