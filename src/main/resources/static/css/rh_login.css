@@ -50,7 +50,7 @@ body {
 	left: 20px;
 }
 
-.homeImg, #backLogin, #find-user, .login-button, .login-img>img, #find-user>span:hover
+.checkBtn, .homeImg, #backLogin, #find-user, .login-button, .login-img>img, #find-user>span:hover
 	{
 	cursor: pointer;
 }
