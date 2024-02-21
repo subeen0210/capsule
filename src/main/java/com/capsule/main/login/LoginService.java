@@ -12,7 +12,6 @@ public class LoginService {
 	LoginMapper loginMapper;
 
 	public int checkLogin(String u_id, String u_pw, HttpSession hs) {
-		System.out.println(u_id);
 		String id = loginMapper.checkLogin(u_id).getU_id();
 		UserDTO user = loginMapper.checkLogin(u_id);
 
