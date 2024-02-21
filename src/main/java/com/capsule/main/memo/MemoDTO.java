@@ -2,11 +2,11 @@ package com.capsule.main.memo;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,4 +18,5 @@ public class MemoDTO {
     private String m_keyword;
     private String m_text;
 	private String m_pic;
+	private MultipartFile m_file;
 }

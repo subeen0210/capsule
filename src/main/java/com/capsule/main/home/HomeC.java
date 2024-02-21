@@ -46,10 +46,10 @@ public class HomeC {
 //	}
 	
 	@PostMapping("/write")
-	public String insertMemo(@RequestPart MultipartFile file) {
-		String originalFileName = file.getOriginalFilename();
-		File path = new File("/webapp/WEB-INF/views/imgFile" + originalFileName);
-		
+	public String insertMemo(MemoDTO memoDTO) {
+		System.out.println(memoDTO);
+		System.out.println(memoDTO.getM_file());
+		mDAO.insertMemo(memoDTO);
 		return "redirect:/happy-capsule/main";
 	}
 	
