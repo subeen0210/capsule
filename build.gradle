@@ -44,7 +44,7 @@ dependencies {
 	implementation 'com.oracle.database.security:osdt_cert:21.5.0.0'
 	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_core
 	implementation 'com.oracle.database.security:osdt_core:21.5.0.0'
-
+	implementation 'com.google.firebase:firebase-admin:9.0.0'
 }
 
 tasks.named('test') {
