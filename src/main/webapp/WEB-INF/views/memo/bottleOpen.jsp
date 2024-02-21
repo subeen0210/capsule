@@ -8,7 +8,6 @@
 <title>행복 저금통</title>
 <link rel="stylesheet" type="text/css" href="/css/mg_menu.css">
 <link rel="stylesheet" type="text/css" href="/css/jh_memo.css">
-<link rel="stylesheet" type="text/css" href="/css/sb_modal.css">
 <script type="text/javascript" src="/js/jh_memo.js" defer></script>
 </head>
 <body>
@@ -34,27 +33,24 @@
 				</div>
 				<div class="modal-top">
 					<div class="modal-title">
-						오늘의 행복 키워드:<input id="modal-title-input">
+						
 					</div>
 					<div class="modal-date">
 						<div id="modal-date-input"></div>
 					</div>
 				</div>
-				<c:choose>
-					<c:when test="">
+				
+					
 						<div class="modal-img-show">
-							<img id="modal-img-show" src="">
+							
 						</div>
-					</c:when>
-					<c:otherwise>
+					
 						
-					</c:otherwise>
-				</c:choose>
-				<div class="modal-img">
-					<input type="file" id="file-upload">
-				</div>
+					
+				<div class="main-textarea">
 				<div class="modal-textarea">
-					<textarea></textarea>
+					
+				</div>
 				</div>
 				
 			</div>
