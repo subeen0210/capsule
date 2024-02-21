@@ -49,10 +49,9 @@ public class ShelfC {
 		return "home";
 	}
 	
-	@PostMapping("/shelf/list/{id}")
-	public @ResponseBody List<ShelfDTO> listJson(@PathVariable("id") String id, Model model) {
-		System.out.println(id);
-		System.out.println(sDAO.getShelfList(id));
-		return sDAO.getShelfList(id);
+	@GetMapping("/shelf/jsonlist/{id}")
+	public List<ShelfDTO> listJson(@PathVariable("id") String id) {
+		return sDAO.getJsonList(id);
 	}
+	
 }

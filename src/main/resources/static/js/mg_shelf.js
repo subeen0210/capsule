@@ -20,33 +20,47 @@ document.addEventListener("DOMContentLoaded", function() {
 			document.querySelectorAll('.go-icon')[0].style.display = 'none';
 		}
 
+		document.querySelectorAll('.added-shelf').forEach(function(e) {
+			e.style.display = 'none';
+		})
+
 		document.querySelectorAll('.go-icon')[0].addEventListener("click", function() {
-			document.querySelector('.shelf-paging-' + currentPage).style.left = '100vw';
-			document.querySelector('.shelf-paging-' + (currentPage - 1)).style.left = shelfLeft + 'px';
+			document.querySelector('.shelf-paging-' + (currentPage - 1)).style.display = '';
+			setTimeout(function() {
+				document.querySelector('.shelf-paging-' + currentPage).style.left = '100vw';
+				document.querySelector('.shelf-paging-' + (currentPage - 1)).style.left = shelfLeft + 'px';
 
-
-			currentPage -= 1;
-
-			document.querySelectorAll('.go-icon')[1].style.display = 'flex';
-
-
-			if (currentPage == 1) {
-				document.querySelectorAll('.go-icon')[0].style.display = 'none';
 				document.querySelectorAll('.go-icon')[1].style.display = 'flex';
-			}
+
+				if ((currentPage -1) == 1) {
+					document.querySelectorAll('.go-icon')[0].style.display = 'none';
+					document.querySelectorAll('.go-icon')[1].style.display = 'flex';
+				}
+				
+				setTimeout(function() {
+					document.querySelector('.shelf-paging-' + (currentPage)).style.display = 'none';
+
+					currentPage -= 1;
+				}, 750);
+
+			}, 100);
 		})
 
 		document.querySelectorAll('.go-icon')[1].addEventListener("click", function() {
-			document.querySelector('.shelf-paging-' + currentPage).style.left = '-' + shelfRight + 'px';
-			document.querySelector('.shelf-paging-' + (currentPage + 1)).style.left = shelfLeft + 'px';
+			document.querySelector('.shelf-paging-' + (currentPage + 1)).style.display = '';
 
-			currentPage += 1;
+			setTimeout(function() {
+				document.querySelector('.shelf-paging-' + currentPage).style.left = '-' + shelfRight + 'px';
+				document.querySelector('.shelf-paging-' + (currentPage + 1)).style.left = shelfLeft + 'px';
 
-			document.querySelectorAll('.go-icon')[0].style.display = 'flex';
+				currentPage += 1;
 
-			if (currentPage == lastPage) {
-				document.querySelectorAll('.go-icon')[1].style.display = 'none';
-			}
+				document.querySelectorAll('.go-icon')[0].style.display = 'flex';
+
+				if (currentPage == lastPage) {
+					document.querySelectorAll('.go-icon')[1].style.display = 'none';
+				}
+			}, 100);
 		})
 
 	}
