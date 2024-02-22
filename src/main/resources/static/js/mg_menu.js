@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 로그아웃 클릭
 	document.querySelector('.do-logout-icon').addEventListener("click", function() {
 		console.log(3);
+		location.href = '/happy-capsule';
 	})
 
 	// 돌아가기 클릭
