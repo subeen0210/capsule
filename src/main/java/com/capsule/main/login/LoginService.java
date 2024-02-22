@@ -18,6 +18,7 @@ public class LoginService {
 		if (u_id.equals(id)) {
 			if (u_pw.equals(user.getU_pw())) {
 				System.out.println("로그인 성공");
+				hs.setMaxInactiveInterval(3600);
 				hs.setAttribute("user", user);
 				return 1;
 			} else {
