@@ -18,6 +18,10 @@ public interface MemoMapper {
 
     @Select("Select * from happy_memo where m_no=#{no}")
     MemoDTO openMemo(@Param("no") int no);
+
+    
+    @Insert("insert into happy_memo values(happy_memo_seq.nextval, #{b_no},sysdate, #{m_keyword}#{m_text}#{m_pic})")
+	int insertMemo(MemoDTO memoDTO);
     
 //    @Insert("insert into memo VALUES(memo_seq.NEXTVAL, sysdate, #{}, 'testtesttesttest', 'aa.jpg', 13)")
 //	int insertMemo(MemoMultiDTO multiDTO, HttpSession hs);
