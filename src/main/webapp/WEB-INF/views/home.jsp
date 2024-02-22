@@ -66,7 +66,7 @@
 				<div class="modal-top2">
 					<div class="modal-title">
 						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input"
-							placeholder="100자 이내로 입력" maxlength="100">
+							placeholder="35자 이내로 입력" maxlength="35">
 					</div>
 					<div class="modal-img">
 						<input name="m_file" type="file" accept="image/*" id="file-upload"

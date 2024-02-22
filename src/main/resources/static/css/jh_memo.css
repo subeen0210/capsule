@@ -120,12 +120,13 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	margin: 20px 0px;
-	width: 80%;
+	width: 100%;
 }
 
 .modal-title {
 	font-family: 'KNPSKkomi-Regular00';
 	font-size: 20pt;
+	width: 100%;
 }
 
 
