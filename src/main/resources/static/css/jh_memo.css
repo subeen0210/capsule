@@ -54,6 +54,9 @@ body {
 	border: red solid 1px;
 	width: 80px;
 }
+.main-memo:hover{
+cursor: pointer;
+}
 
 
 
