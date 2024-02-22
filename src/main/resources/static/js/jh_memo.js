@@ -48,10 +48,17 @@ memoImages.forEach(image => {
 
 // 모달 취소 버튼 클릭 이벤트 리스너 추가
 cancelButton.addEventListener("click", () => {
-    modal.style.display = 'none';
-    modalOverlay.style.display = 'none';
+  modal.style.display = 'none';
+  modalOverlay.style.display = 'none';
 });
 
+// Esc 키를 눌렀을 때 모달 닫기
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" || event.key === "Esc") {
+    modal.style.display = 'none';
+    modalOverlay.style.display = 'none';
+  }
+});
 
 });
 
