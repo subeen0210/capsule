@@ -14,11 +14,12 @@ import lombok.NoArgsConstructor;
 @Data
 public class MemoMultiDTO {
 	
-	private MultipartFile file;
+	private MultipartFile m_file;
 	private int m_no;
 	private Date m_date;
 	private String m_keyword;
 	private String m_text;
 	private String m_pic;
+	private int b_no;
 	
 }

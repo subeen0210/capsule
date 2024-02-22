@@ -45,10 +45,10 @@
 
 #modal-cancle {
 	/* 	border: red solid 1px; */
-	margin-top: 15px;
 	display: flex;
 	justify-content: flex-end;
 	padding-right: 15px;
+	padding-top: 20px;
 }
 
 #cancle-botton {
@@ -88,6 +88,7 @@
 	margin-left: 10px;
 	font-family: 'KNPSKkomi-Regular00';
 	font-size: 15pt;
+	input:focus{outline:none;}
 }
 
 .modal-date {
@@ -165,6 +166,7 @@ textarea {
 	text-align: center;
 	line-height: 50px;
 	color: #FDFAE9;
+	margin-bottom: 20px;
 }
 
 #modal-btn:hover {
