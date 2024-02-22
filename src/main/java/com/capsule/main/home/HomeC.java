@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.capsule.main.login.UserDTO;
 import com.capsule.main.memo.MemoDAO;
@@ -33,12 +35,10 @@ public class HomeC {
 	}
 
 	
+	@ResponseBody
 	@PostMapping("/write")
-	public String insertMemo(MemoDTO memoDTO) {
-		System.out.println(memoDTO);
-		System.out.println(memoDTO.getM_file());
-		mDAO.insertMemo(memoDTO);
-		return "redirect:/happy-capsule/main";
+	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
+		return 	mDAO.insertMemo(memoDTO, hs);
 	}
 	
 	

@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResourceLoader;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
+import com.capsule.main.bottle.BottleMapper;
+import com.capsule.main.login.UserDTO;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.BlobId;
@@ -18,11 +18,18 @@ import com.google.cloud.storage.StorageOptions;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 
+import jakarta.servlet.http.HttpSession;
+
 @Service
 public class MemoDAO {
 	@Autowired
 	private MemoMapper mMapper;
+	
+	@Autowired
+	private BottleMapper bMapper;
 
+	private int bottlePk;
+	
 	public List<MemoDTO> getMemoList(int no) {
 		System.out.println(no);
 		return mMapper.getMemoList(no);
@@ -33,7 +40,7 @@ public class MemoDAO {
 		return mMapper.openMemo(no);
 	}
 
-	public void insertMemo(MemoDTO memoDTO) {
+	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
 		try {
 
 //			String fileName = memoDTO.getM_file().getOriginalFilename();
@@ -75,10 +82,27 @@ public class MemoDAO {
 
 			// 저장할 이미지 경로 - 요걸 m_pic에 insert하면 됨
 			System.out.println("Public URL: " + publicUrl);
+			memoDTO.setM_pic(publicUrl);
+			if(memoDTO.getB_no()==0) {
+				UserDTO userDTO = (UserDTO) hs.getAttribute("user");
+				if(bMapper.createBottle(userDTO.getU_id())==1) {
+					bottlePk = bMapper.curBottleNo();
+					memoDTO.setB_no(bottlePk);
+				}
+			}
+			
+			mMapper.insertMemo(memoDTO);
+			System.out.println("================ pk : " + bottlePk);
+			return bottlePk;
+			
+			
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return 0;
 	}
 
 }

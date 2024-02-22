@@ -59,11 +59,13 @@
 					<span id="cancle-botton">X</span>
 				</div>
 				<div class="modal-top">
-					<div class="modal-title">
-						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input" placeholder="100자 이내로 입력">
-					</div>
 					<div class="modal-date">
 						<div id="modal-date-input"></div>
+					</div>
+				</div>
+				<div class="modal-top2">
+					<div class="modal-title">
+						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input" placeholder="100자 이내로 입력">
 					</div>
 				</div>
 				<c:choose>
@@ -77,7 +79,7 @@
 					</c:otherwise>
 				</c:choose>
 				<div class="modal-img">
-					<input name="m_file" type="file" id="file-upload">
+					<input name="m_file" type="file" accept = "image/*" id="file-upload">
 				</div>
 				<div class="modal-textarea">
 					<textarea placeholder="250자 이내로 입력" name="m_text"></textarea>
