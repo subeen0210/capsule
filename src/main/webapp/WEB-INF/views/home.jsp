@@ -69,7 +69,7 @@
 							placeholder="35자 이내로 입력" maxlength="35">
 					</div>
 					<div class="modal-img">
-						<input name="m_file" type="file" accept="image/*" id="file-upload"
+						<input name="m_file" type="file" accept="image/*" size="3000000" id="file-upload"
 							onchange="preview()">
 					</div>
 
