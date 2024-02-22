@@ -28,6 +28,8 @@ public class MemoDAO {
 	@Autowired
 	private BottleMapper bMapper;
 
+	private int bottlePk;
+	
 	public List<MemoDTO> getMemoList(int no) {
 		System.out.println(no);
 		return mMapper.getMemoList(no);
@@ -38,7 +40,7 @@ public class MemoDAO {
 		return mMapper.openMemo(no);
 	}
 
-	public void insertMemo(MemoDTO memoDTO, HttpSession hs) {
+	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
 		try {
 
 //			String fileName = memoDTO.getM_file().getOriginalFilename();
@@ -83,12 +85,15 @@ public class MemoDAO {
 			memoDTO.setM_pic(publicUrl);
 			if(memoDTO.getB_no()==0) {
 				UserDTO userDTO = (UserDTO) hs.getAttribute("user");
-//				System.out.println(bMapper.createBottle(userDTO.getU_id()));
-				System.out.println(bMapper.createBottle("ran"));
+				if(bMapper.createBottle(userDTO.getU_id())==1) {
+					bottlePk = bMapper.curBottleNo();
+					memoDTO.setB_no(bottlePk);
+				}
 			}
 			
 			mMapper.insertMemo(memoDTO);
-			
+			System.out.println("================ pk : " + bottlePk);
+			return bottlePk;
 			
 			
 			
@@ -97,6 +102,7 @@ public class MemoDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return 0;
 	}
 
 }

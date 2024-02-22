@@ -42,29 +42,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		modal.style.display = 'none';
 		modalOverlay.style.display = 'none';
 	})
-	
-	
-	document.querySelector('#modal-btn').addEventListener("click", (e)=>{
-		const form = e.target.closest('form');		
+
+
+	document.querySelector('#modal-btn').addEventListener("click", (e) => {
+		const form = e.target.closest('form');
 		console.log(form);
 
-		 const formData = new FormData(form);
-		 for(const val of formData.values()){
-			 console.log(val);
-		 }
-		 
-		 fetch("/happy-capsule/write", {
-			 method : 'POST',
-			 body : formData
-		 })
-		 .then(response => {
-			 console.log(response);
-		 })
-		
+		const formData = new FormData(form);
+		for (const val of formData.values()) {
+			console.log(val);
+		}
+
+		fetch("/happy-capsule/write", {
+			method: 'POST',
+			body: formData
+		})
+			.then(response => {
+				console.log(response);
+			})
+
 	});
-	
-	
-	
+
+
+
 });
 
 
@@ -80,16 +80,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			console.log(key + ': ' + value);
 		}
 		try {
-			const response = fetch('/happy-capsule/write/0', {
+			fetch('/happy-capsule/write', {
 				method: 'POST',
 				body: formData
-			});
+			})
+			.then(response => response.json())
+			.then(data => {
+					console.log(data); // 응답 데이터 출력
+					location.href='/happy-capsule/bottle/'+data;
+			})
 
-			if (!response.ok) {
-				throw new Error('서버 응답이 실패했습니다.');
-			}
 
-			console.log('데이터가 성공적으로 서버로 전송되었습니다.');
+
 		} catch (error) {
 			console.error('오류가 발생했습니다:', error.message);
 		}
