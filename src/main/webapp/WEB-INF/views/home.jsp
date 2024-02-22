@@ -66,21 +66,19 @@
 				<div class="modal-top2">
 					<div class="modal-title">
 						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input"
-							placeholder="100자 이내로 입력">
+							placeholder="100자 이내로 입력" maxlength="100">
 					</div>
 					<div class="modal-img">
-					<input name="m_file" type="file" accept = "image/*" id="file-upload">
-				</div>
-					
+						<input name="m_file" type="file" accept="image/*" id="file-upload"
+							onchange="preview()">
+					</div>
+
 				</div>
 				<div class="modal-img-show">
 					<img id="modal-img-show" src="" style="display: none;">
 				</div>
-				<div class="modal-img">
-					<input name="m_file" type="file" accept="image/*" id="file-upload" onchange="preview()">
-				</div>
 				<div class="modal-textarea">
-					<textarea placeholder="250자 이내로 입력" name="m_text"></textarea>
+					<textarea placeholder="250자 이내로 입력" name="m_text" maxlength="250"></textarea>
 				</div>
 				<div class="modal-button">
 					<button type="button" id="modal-btn">행복 등록</button>
