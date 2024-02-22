@@ -67,6 +67,10 @@
 					<div class="modal-title">
 						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input" placeholder="100자 이내로 입력">
 					</div>
+					<div class="modal-img">
+					<input name="m_file" type="file" accept = "image/*" id="file-upload">
+				</div>
+					
 				</div>
 				<c:choose>
 					<c:when test="">
@@ -78,9 +82,7 @@
 						
 					</c:otherwise>
 				</c:choose>
-				<div class="modal-img">
-					<input name="m_file" type="file" accept = "image/*" id="file-upload">
-				</div>
+				
 				<div class="modal-textarea">
 					<textarea placeholder="250자 이내로 입력" name="m_text"></textarea>
 				</div>

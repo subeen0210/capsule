@@ -12,53 +12,44 @@
 </head>
 <body>
 	<div class="main-container">
-		<div id="main-text">사용자 이름 님의 행복 저금통</div>
+		<div id="main-text">${user.u_name} 님의 행복 저금통</div>
 
 
 		<div class="open">
 			<c:forEach items="${memoList}" var="memo">
 				<div class="img">
-					<img class="main-memo" id="${memo.m_no}" alt="" src="/img/memo_white.png" onclick="openMemo(this)">
+					<img class="main-memo" id="${memo.m_no}" alt=""
+						src="/img/memo_white.png" onclick="openMemo(this)">
 				</div>
 			</c:forEach>
 		</div>
 
 		<!-- 모달창 코드 -->
 
-	<div class="modal-container">
-		<form action="/happy-capsule/write">
-			<div class="modal-body">
-				<div id="modal-cancle">
-					<span id="cancle-botton">X</span>
-				</div>
-				<div class="modal-top">
-					<div class="modal-title">
-						
+		<div class="modal-container">
+			<form action="/happy-capsule/write">
+				<div class="modal-body">
+					<div id="modal-cancle">
+						<span id="cancle-botton">X</span>
 					</div>
-					<div class="modal-date">
-						<div id="modal-date-input"></div>
-					</div>
-				</div>
-				
-					
-						<div class="modal-img-show">
-							
+					<div class="modal-top">
+						<div class="modal-date">
+							<div id="modal-date-input"></div>
 						</div>
-					
-						
-					
-				<div class="main-textarea">
-				<div class="modal-textarea">
-					
-				</div>
-				</div>
-				
-			</div>
-		</form>
-	</div>
+						<div class="modal-title"></div>
+					</div>
+					<div id="tape"></div>
+					<div class="modal-img-show"></div>
+					<div class="main-textarea">
+						<div class="modal-textarea"></div>
+					</div>
 
-	<!-- 모달 배경 -->
-	<div class="modal-overlay"></div>
+				</div>
+			</form>
+		</div>
+
+		<!-- 모달 배경 -->
+		<div class="modal-overlay"></div>
 
 
 	</div>

@@ -102,23 +102,25 @@ body {
 	width: 23px;
 	height: 23px;
 	border-radius: 3px;
-	background-color: white;
+	background-color: #6C4C1C;
 	/* 	border: #6C4C1C solid 1px; */
 	text-align: center;
 	font-size: 11pt;
-	color: #848484;
+	color: white;
 	cursor: pointer;
 }
 
 .modal-top {
 	/* 	border: blue solid 1px; */
 	display: flex;
-	justify-content: space-between;
-	text-align: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	text-align: left;
 	align-items: center;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-top: 20px;
+	margin: 20px 0px;
+	width: 50%;
 }
 
 .modal-title {
@@ -131,11 +133,12 @@ body {
 .modal-date {
 	font-family: 'KNPSKkomi-Regular00';
 	font-size: 20pt;
-	margin-right: 20px;
+	margin-right: 0;
 }
 
 #modal-date-input {
-	margin-left: 10px;
+	margin-left: 0px;
+	width:200px;
 }
 
 .modal-img-show {
@@ -146,9 +149,10 @@ body {
 }
 
 #modal-img-show {
-	border: green solid 1px;
-	width: 300px;
+/* 	border: green solid 1px; */
+	width: auto;
 	height: 300px;
+	
 }
 
 .modal-img {
@@ -169,18 +173,18 @@ body {
 	justify-content: center;
 }
 .modal-textarea {
-	
-	margin-top: 20px;
 	width: 95%;
-	height: 150px;
 	padding: 10px;
 	box-sizing: border-box;
-	border: solid 2px #6C4C1C;
 	border-radius: 5px;
 	font-family: 'KNPSKkomi-Regular00';
 	font-size: 20px;
 	resize: both;
 	background-color: transparent;
+	margin: 20px 0px 40px 0px;
+}
+.modal-textarea > text{
+	border-bottom: 1px solid black;
 }
 
 
