@@ -110,7 +110,7 @@ function preview() {
             console.log(event);
             imgTag.src = event.target.result;
             imgTag.style.display = "block";
-            imgTag.width = 500;
+            imgTag.height = 300;
         }
         reader.readAsDataURL(fileImg.files[0]);
     } else {
