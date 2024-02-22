@@ -5,9 +5,12 @@ select * from memo;
 select * from bottle;
 
 create sequence happy_bottle_seq;
-
+select * from happy_memo;
 select * from happy_bottle;
-SELECT happy_bottle_seq.CURRVAL FROM DUAL;
 
+SELECT happy_bottle_seq.CURRVAL FROM DUAL;
+insert into happy_bottle values(happy_bottle_seq.nextval, 'ran', sysdate);
 insert into happy_bottle values(happy_bottle_seq.nextval, 'ran', sysdate);
 SELECT happy_bottle_seq.currval as b_no FROM dual;
+
+

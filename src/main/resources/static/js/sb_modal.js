@@ -98,3 +98,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	})
 });
+
+
+function preview() {
+    let fileImg = document.querySelector("input[name=m_file]");
+    let imgTag = document.getElementById("modal-img-show");
+
+    if (fileImg.files && fileImg.files[0]) {
+        let reader = new FileReader();
+        reader.onload = function(event) {
+            console.log(event);
+            imgTag.src = event.target.result;
+            imgTag.style.display = "block";
+            imgTag.height = 300;
+        }
+        reader.readAsDataURL(fileImg.files[0]);
+    } else {
+        imgTag.src = "";
+    }
+}
