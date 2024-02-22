@@ -65,21 +65,15 @@
 				</div>
 				<div class="modal-top2">
 					<div class="modal-title">
-						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input" placeholder="100자 이내로 입력">
+						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input"
+							placeholder="100자 이내로 입력">
 					</div>
 				</div>
-				<c:choose>
-					<c:when test="">
-						<div class="modal-img-show">
-							<img id="modal-img-show" src="">
-						</div>
-					</c:when>
-					<c:otherwise>
-						
-					</c:otherwise>
-				</c:choose>
+				<div class="modal-img-show">
+					<img id="modal-img-show" src="" style="display: none;">
+				</div>
 				<div class="modal-img">
-					<input name="m_file" type="file" accept = "image/*" id="file-upload">
+					<input name="m_file" type="file" accept="image/*" id="file-upload" onchange="preview()">
 				</div>
 				<div class="modal-textarea">
 					<textarea placeholder="250자 이내로 입력" name="m_text"></textarea>
