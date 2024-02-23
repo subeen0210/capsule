@@ -14,3 +14,6 @@ insert into happy_bottle values(happy_bottle_seq.nextval, 'ran', sysdate);
 SELECT happy_bottle_seq.currval as b_no FROM dual;
 
 
+select * from happy_bottle;
+DELETE FROM happy_bottle WHERE b_no = 90;
+DELETE FROM happy_bottle WHERE b_no BETWEEN 97 AND 99;
