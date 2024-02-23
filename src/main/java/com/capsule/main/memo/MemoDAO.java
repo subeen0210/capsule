@@ -43,7 +43,7 @@ public class MemoDAO {
 
 	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
 		try {
-
+			System.out.println(memoDTO);
 //			String fileName = memoDTO.getM_file().getOriginalFilename();
 
 			FileInputStream serviceAccount = new FileInputStream("src/main/resources/serviceKey.json");
@@ -91,6 +91,8 @@ public class MemoDAO {
 					bottlePk = bMapper.curBottleNo();
 					memoDTO.setB_no(bottlePk);
 				}
+			} else if (memoDTO.getB_no() != 0) {
+				
 			}
 			
 			mMapper.insertMemo(memoDTO);

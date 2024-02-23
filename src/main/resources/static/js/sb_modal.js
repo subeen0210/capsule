@@ -108,6 +108,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		let file = document.getElementById("file-upload").files[0];
 		let maxSizeInBytes = 3 * 1024 * 1024;
 		
+		let currentUrl = window.location.href;
+		let bottlePk = currentUrl.match(/\d+/);
+		if(bottlePk != null) {
+			document.querySelector("#b_no").value = bottlePk;
+			console.log(bottlePk)
+		}
+		
+		
 		if (keyword === "") {
 			alert('오늘의 행복 키워드를 입력해주세요');
 			return;
@@ -130,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		for (let [key, value] of formData.entries()) {
 			console.log(key + ': ' + value);
 		}
-
+	
 		try {
 			fetch('/happy-capsule/write', {
 				method: 'POST',
@@ -144,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		} catch (error) {
 			console.error('오류가 발생했습니다:', error.message);
 		}
+	 
 	});
 });
 

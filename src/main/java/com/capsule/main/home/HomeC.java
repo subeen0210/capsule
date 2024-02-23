@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.capsule.main.login.LoginService;
 import com.capsule.main.login.UserDTO;
 import com.capsule.main.memo.MemoDAO;
 import com.capsule.main.memo.MemoDTO;
@@ -22,15 +23,22 @@ public class HomeC {
 	private MemoDAO mDAO;
 	
 	@Autowired
+	private LoginService loginService;
+	
+	@Autowired
 	private HttpSession hs;
 
 	@GetMapping("/main")
 	public String makeMemoGO(Model model) {
+		if(loginService.loginCheck()) {
+			
 		UserDTO loginUser = (UserDTO) hs.getAttribute("user");
 		System.out.println(loginUser);
 		model.addAttribute("user", loginUser);
 		model.addAttribute("content", "/WEB-INF/views/home/homeContent.jsp");
 		return "home";
+		}
+		return "redirect:/happy-capsule";
 	}
 
 	

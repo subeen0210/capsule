@@ -33,7 +33,7 @@
 			
 			<div class="do-write menu-list">
 			<c:choose>
-			<c:when test="${num_m_no == 20 }">
+			<c:when test="${num_m_no == 3 }">
 				<div class="go-open-icon">
 					<img class="menu-icon" src="/img/memo_white.png">
 					<div class="menu-txt">저금통열기</div>
@@ -48,12 +48,14 @@
 			</c:choose>
 			</div>
 			
+			<c:if test="${user ne null }">
 			<div class="do-logout menu-list">
 				<div class="do-logout-icon">
 					<img class="menu-icon" src="/img/door.png">
 					<div class="menu-txt">로그아웃</div>
 				</div>
 			</div>
+			</c:if>
 		</div>
 
 	</div>
@@ -89,7 +91,8 @@
 					<textarea placeholder="250자 이내로 입력" name="m_text" maxlength="250"></textarea>
 				</div>
 				<div class="modal-button">
-					<button type="button" id="modal-btn">행복 등록</button>
+					<button type="button" id="modal-btn">행복 등록 </button>
+					<input type="hidden" id="b_no" name="b_no" value="0">
 				</div>
 			</div>
 		</form>
