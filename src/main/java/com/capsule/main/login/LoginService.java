@@ -11,14 +11,22 @@ public class LoginService {
 	@Autowired
 	LoginMapper loginMapper;
 
-	public int checkLogin(String u_id, String u_pw, HttpSession hs) {
-		System.out.println(u_id);
+	@Autowired
+	HttpSession hs;
+	public boolean loginCheck() {
+		UserDTO user = (UserDTO) hs.getAttribute("user");
+		return user == null? false : true;
+	}
+	
+	
+	public int login(String u_id, String u_pw, HttpSession hs) {
 		String id = loginMapper.checkLogin(u_id).getU_id();
 		UserDTO user = loginMapper.checkLogin(u_id);
 
 		if (u_id.equals(id)) {
 			if (u_pw.equals(user.getU_pw())) {
 				System.out.println("로그인 성공");
+				hs.setMaxInactiveInterval(3600);
 				hs.setAttribute("user", user);
 				return 1;
 			} else {
@@ -27,7 +35,6 @@ public class LoginService {
 			}
 		}
 		return 0;
-
 	}
 
 	public int signUp(UserDTO userDTO) {

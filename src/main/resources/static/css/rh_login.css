@@ -50,8 +50,8 @@ body {
 	left: 20px;
 }
 
-.checkBtn, .homeImg, #backLogin, #find-user, .login-button, .login-img>img, #find-user>span:hover
-	{
+.checkBtn, .homeImg, #backLogin, #find-user, .login-button, .login-img>img,
+	#find-user>span:hover {
 	cursor: pointer;
 }
 /* 로그인 문구 */
@@ -74,8 +74,8 @@ body {
 	font-size: 13pt;
 }
 /* login input을 감싸는 container */
-#login-input-container{
-margin: 10% 0%;	
+#login-input-container {
+	margin: 10% 0%;
 }
 
 /* 버튼 속성 */
@@ -97,7 +97,6 @@ margin: 10% 0%;
 /* 회원가입 문구 */
 #join-text {
 	font-size: 25pt;
-
 }
 /* 회원가입 input을 감싸는 박스 */
 #join-input-box {
@@ -112,6 +111,8 @@ margin: 10% 0%;
 	position: fixed;
 	margin-left: 10px;
 	margin-top: 5px;
+	background-color: #6c4c1c;
+	color: white;
 }
 
 /* join 인풋 유효성 검사 red box */
@@ -148,9 +149,9 @@ input:invalid {
 	justify-content: center;
 }
 /* 이메일 적는 칸, 결과 보여주는 카 */
-.find-form{
+.find-form {
 	width: 100%;
-    margin: 15% 0%;
+	margin: 15% 0%;
 }
 
 #find-text {

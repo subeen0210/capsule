@@ -36,12 +36,15 @@
 				</div>
 				<div class="slider-container">
 					<div class="container-div">
-						<img class="" alt="" src="/img/index_bottle.png" width="300px">
+						<img alt="" src="/img/index_bottle.png" width="300px">
 					</div>
 					<div class="container-div index-explain">오늘 하루 있었던 행복한 일을 작성해
 						보관해요</div>
 				</div>
 				<div class="slider-container">
+				<div class="container-div">
+						<img alt="" src="/img/index_memo.png" width="40%">
+					</div>
 					<div class="container-div index-explain">일정 기간이 지나면 저금해 둔 행복
 						저금을 확인할 수 있어요</div>
 				</div>

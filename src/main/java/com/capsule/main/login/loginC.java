@@ -28,9 +28,8 @@ public class loginC {
 	// 일치 시 메인 홈으로 이동
 	@ResponseBody
 	@PostMapping("/login")
-	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs, Model model) {
-		System.out.print(u_id+u_pw);
-		if (loginService.checkLogin(u_id, u_pw, hs) == 1) {
+	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs) {
+		if (loginService.login(u_id, u_pw, hs) == 1) {
 			return "1";
 		} else {
 			return "0";

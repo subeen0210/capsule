@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				document.querySelectorAll('.go-icon')[1].style.display = 'flex';
 
-				if ((currentPage -1) == 1) {
+				if ((currentPage - 1) == 1) {
 					document.querySelectorAll('.go-icon')[0].style.display = 'none';
 					document.querySelectorAll('.go-icon')[1].style.display = 'flex';
 				}
-				
+
 				setTimeout(function() {
 					document.querySelector('.shelf-paging-' + (currentPage)).style.display = 'none';
 

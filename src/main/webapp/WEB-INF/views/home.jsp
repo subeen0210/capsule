@@ -30,22 +30,32 @@
 					<div class="menu-txt">저금통만들기</div>
 				</div>
 			</div>
+			
 			<div class="do-write menu-list">
-				<div class="go-write-icon">
-					<img class="menu-icon" src="/img/pen.png">
-					<div class="menu-txt">작성하기</div>
-				</div>
+			<c:choose>
+			<c:when test="${num_m_no == 3 }">
 				<div class="go-open-icon">
 					<img class="menu-icon" src="/img/memo_white.png">
 					<div class="menu-txt">저금통열기</div>
 				</div>
+			</c:when>
+			<c:otherwise>
+				<div class="go-write-icon">
+					<img class="menu-icon" src="/img/pen.png">
+					<div class="menu-txt">작성하기</div>
+				</div>
+			</c:otherwise>
+			</c:choose>
 			</div>
+			
+			<c:if test="${user ne null }">
 			<div class="do-logout menu-list">
 				<div class="do-logout-icon">
 					<img class="menu-icon" src="/img/door.png">
 					<div class="menu-txt">로그아웃</div>
 				</div>
 			</div>
+			</c:if>
 		</div>
 
 	</div>
@@ -59,31 +69,30 @@
 					<span id="cancle-botton">X</span>
 				</div>
 				<div class="modal-top">
-					<div class="modal-title">
-						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input" placeholder="100자 이내로 입력">
-					</div>
 					<div class="modal-date">
 						<div id="modal-date-input"></div>
 					</div>
 				</div>
-				<c:choose>
-					<c:when test="">
-						<div class="modal-img-show">
-							<img id="modal-img-show" src="">
-						</div>
-					</c:when>
-					<c:otherwise>
-						
-					</c:otherwise>
-				</c:choose>
-				<div class="modal-img">
-					<input name="m_file" type="file" id="file-upload">
+				<div class="modal-top2">
+					<div class="modal-title">
+						오늘의 행복 키워드:<input name="m_keyword" id="modal-title-input"
+							placeholder="35자 이내로 입력" maxlength="35">
+					</div>
+					<div class="modal-img">
+						<input name="m_file" type="file" accept="image/*" size="3000000" id="file-upload"
+							onchange="preview()">
+					</div>
+
+				</div>
+				<div class="modal-img-show">
+					<img id="modal-img-show" src="" style="display: none;">
 				</div>
 				<div class="modal-textarea">
-					<textarea placeholder="250자 이내로 입력" name="m_text"></textarea>
+					<textarea placeholder="250자 이내로 입력" name="m_text" maxlength="250"></textarea>
 				</div>
 				<div class="modal-button">
-					<button type="button" id="modal-btn">행복 등록</button>
+					<button type="button" id="modal-btn">행복 등록 </button>
+					<input type="hidden" id="b_no" name="b_no" value="0">
 				</div>
 			</div>
 		</form>
