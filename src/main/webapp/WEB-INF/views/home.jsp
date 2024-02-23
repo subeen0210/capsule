@@ -30,16 +30,24 @@
 					<div class="menu-txt">저금통만들기</div>
 				</div>
 			</div>
+			
 			<div class="do-write menu-list">
-				<div class="go-write-icon">
-					<img class="menu-icon" src="/img/pen.png">
-					<div class="menu-txt">작성하기</div>
-				</div>
+			<c:choose>
+			<c:when test="${num_m_no == 20 }">
 				<div class="go-open-icon">
 					<img class="menu-icon" src="/img/memo_white.png">
 					<div class="menu-txt">저금통열기</div>
 				</div>
+			</c:when>
+			<c:otherwise>
+				<div class="go-write-icon">
+					<img class="menu-icon" src="/img/pen.png">
+					<div class="menu-txt">작성하기</div>
+				</div>
+			</c:otherwise>
+			</c:choose>
 			</div>
+			
 			<div class="do-logout menu-list">
 				<div class="do-logout-icon">
 					<img class="menu-icon" src="/img/door.png">

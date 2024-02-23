@@ -22,13 +22,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		location.href = '/happy-capsule/main';
 	})
 
-		// 저금통 열기 클릭
-		document.querySelector('.go-open-icon').addEventListener("click", function() {
-			var pathSegments = window.location.pathname.split('/');
-    		var no = pathSegments[pathSegments.length - 1];
-			location.href = '/happy-capsule/open/' + no;
-		})
-	
+
+	// 저금통 열기 클릭
+	document.querySelector('.go-open-icon').addEventListener("click", function() {
+		var pathSegments = window.location.pathname.split('/');
+		var no = pathSegments[pathSegments.length - 1];
+		location.href = '/happy-capsule/open/' + no;
+	})
+
 });
 
 // 페이지 주소에 따라 메뉴 폴딩
@@ -47,6 +48,6 @@ function foldingMenu() {
 		document.querySelector('.do-logout').style.display = 'none';
 	} else if (window.location.pathname.includes('/bottle')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
-		document.querySelector('.go-write-icon').style.display = 'none';
+//		document.querySelector('.go-write-icon').style.display = 'none';
 	}
 }
