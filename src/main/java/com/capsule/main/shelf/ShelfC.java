@@ -49,8 +49,10 @@ public class ShelfC {
 		return "home";
 	}
 	
+	@ResponseBody
 	@GetMapping("/shelf/jsonlist/{id}")
 	public List<ShelfDTO> listJson(@PathVariable("id") String id) {
+		System.out.println(sDAO.getJsonList(id));
 		return sDAO.getJsonList(id);
 	}
 	

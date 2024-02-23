@@ -14,7 +14,7 @@ public interface ShelfMapper {
 	@Select("SELECT * FROM happy_bottle WHERE u_id = (SELECT u_id FROM happy_user WHERE u_id = #{id}) ORDER BY b_no ASC")
 	List<ShelfDTO> getShelfList(@Param("id") String id);
 	
-	@Select("")
+	@Select("Select * from happy_memo where b_no=#{no}")
 	List<MemoDTO> getBottleMemo(@Param("no") int no);
 	
 }
