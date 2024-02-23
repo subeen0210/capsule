@@ -29,7 +29,7 @@
 					<!-- 					<button onclick="shelfListJson(this)" value="sb">sb.json</button> -->
 					<!-- 					<button onclick="shelfListJson(this)" value="rh">rh.json</button> -->
 					<!-- 					<div class="title-txt">ㅇㅇㅇ님의 행복 저금통</div> -->
-					<div class="title-txt">${user.u_name }님의행복저금통</div>
+					<div class="title-txt">${user.u_name } 님의 행복 저금통</div>
 				</div>
 			</div>
 			<div class="shelf shelf-paging-1">
@@ -40,7 +40,7 @@
 								<div class="bottle-space"
 									onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 									<img class="bottle-img" src="/img/bottle.png">
-									<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+									<div class="bottle-inform inform-txt">${bottle.b_date }
 									</div>
 									<img class="bottle-inform infrom-img" src="/img/label.png">
 								</div>
@@ -58,7 +58,7 @@
 								<div class="bottle-space"
 									onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 									<img class="bottle-img" src="/img/bottle.png">
-									<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+									<div class="bottle-inform inform-txt">${bottle.b_date }
 									</div>
 									<img class="bottle-inform infrom-img" src="/img/label.png">
 								</div>
@@ -82,7 +82,7 @@
 										<div class="bottle-space"
 											onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 											<img class="bottle-img" src="/img/bottle.png">
-											<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+											<div class="bottle-inform inform-txt">${bottle.b_date }
 											</div>
 											<img class="bottle-inform infrom-img" src="/img/label.png">
 										</div>
@@ -101,7 +101,7 @@
 										<div class="bottle-space"
 											onclick="location.href='/happy-capsule/bottle/${bottle.b_no}'">
 											<img class="bottle-img" src="/img/bottle.png">
-											<div class="bottle-inform inform-txt">${bottle.b_date }~<br>????-??-??
+											<div class="bottle-inform inform-txt">${bottle.b_date }
 											</div>
 											<img class="bottle-inform infrom-img" src="/img/label.png">
 										</div>
