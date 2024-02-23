@@ -22,20 +22,23 @@ document.addEventListener("DOMContentLoaded", function() {
 		location.href = '/happy-capsule/main';
 	})
 
-		// 저금통 열기 클릭
+
+	// 저금통 열기 클릭
+	if (document.querySelector('.go-open-icon') != null) {
 		document.querySelector('.go-open-icon').addEventListener("click", function() {
 			var pathSegments = window.location.pathname.split('/');
-    		var no = pathSegments[pathSegments.length - 1];
+			var no = pathSegments[pathSegments.length - 1];
 			location.href = '/happy-capsule/open/' + no;
 		})
-	
+	}
+
 });
 
 // 페이지 주소에 따라 메뉴 폴딩
 function foldingMenu() {
 	if (window.location.pathname.includes('/main')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
-		document.querySelector('.go-open-icon').style.display = 'none';
+//		document.querySelector('.go-open-icon').style.display = 'none';
 	} else if (window.location.pathname.includes('/home')) {
 		document.querySelector('.go-list-icon').style.display = 'none';
 		document.querySelector('.do-write').style.display = 'none';
@@ -43,10 +46,10 @@ function foldingMenu() {
 	} else if (window.location.pathname.includes('/shelf')) {
 		document.querySelector('.go-list-icon').style.display = 'none';
 		document.querySelector('.do-write').style.display = 'none';
-		document.querySelector('.go-open-icon').style.display = 'none';
-		document.querySelector('.do-logout').style.display = 'none';
+		//		document.querySelector('.go-open-icon').style.display = 'none';
+//		document.querySelector('.do-logout').style.display = 'none';
 	} else if (window.location.pathname.includes('/bottle')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
-		document.querySelector('.go-write-icon').style.display = 'none';
+		//		document.querySelector('.go-write-icon').style.display = 'none';
 	}
 }

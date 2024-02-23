@@ -11,7 +11,15 @@ public class LoginService {
 	@Autowired
 	LoginMapper loginMapper;
 
-	public int checkLogin(String u_id, String u_pw, HttpSession hs) {
+	@Autowired
+	HttpSession hs;
+	public boolean loginCheck() {
+		UserDTO user = (UserDTO) hs.getAttribute("user");
+		return user == null? false : true;
+	}
+	
+	
+	public int login(String u_id, String u_pw, HttpSession hs) {
 		String id = loginMapper.checkLogin(u_id).getU_id();
 		UserDTO user = loginMapper.checkLogin(u_id);
 
@@ -27,7 +35,6 @@ public class LoginService {
 			}
 		}
 		return 0;
-
 	}
 
 	public int signUp(UserDTO userDTO) {

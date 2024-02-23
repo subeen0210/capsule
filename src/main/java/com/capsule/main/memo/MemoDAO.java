@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.capsule.main.bottle.BottleMapper;
 import com.capsule.main.login.UserDTO;
@@ -42,7 +43,7 @@ public class MemoDAO {
 
 	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
 		try {
-
+			System.out.println(memoDTO);
 //			String fileName = memoDTO.getM_file().getOriginalFilename();
 
 			FileInputStream serviceAccount = new FileInputStream("src/main/resources/serviceKey.json");
@@ -82,6 +83,7 @@ public class MemoDAO {
 
 			// 저장할 이미지 경로 - 요걸 m_pic에 insert하면 됨
 			System.out.println("Public URL: " + publicUrl);
+			
 			memoDTO.setM_pic(publicUrl);
 			if(memoDTO.getB_no()==0) {
 				UserDTO userDTO = (UserDTO) hs.getAttribute("user");
@@ -89,6 +91,8 @@ public class MemoDAO {
 					bottlePk = bMapper.curBottleNo();
 					memoDTO.setB_no(bottlePk);
 				}
+			} else if (memoDTO.getB_no() != 0) {
+				
 			}
 			
 			mMapper.insertMemo(memoDTO);
@@ -105,4 +109,15 @@ public class MemoDAO {
 		return 0;
 	}
 
+	
+	public void countMemo(Model model, int no) {
+		int count =  mMapper.countMemo(no);
+		System.out.println("쪽지 개수 : " + count);
+		model.addAttribute("num_m_no", count);
+	}
+
+	
+	
+	
+	
 }
