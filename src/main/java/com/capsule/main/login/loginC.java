@@ -29,15 +29,10 @@ public class loginC {
 	// 일치 시 메인 홈으로 이동
 	@ResponseBody
 	@PostMapping("/login")
-<<<<<<< HEAD
-	public String login(@RequestParam String u_id, @RequestParam String u_pw, HttpSession hs) {
-		if (loginService.login(u_id, u_pw, hs).equals("success")) {
-			return "success";
-=======
+
 	public String login(@RequestParam("u_id") String u_id, @RequestParam("u_pw") String u_pw, HttpSession hs) {
 		if (loginService.login(u_id, u_pw, hs) == 1) {
-			return "1";
->>>>>>> dev
+			return "success";
 		} else {
 			return "false";
 		}
