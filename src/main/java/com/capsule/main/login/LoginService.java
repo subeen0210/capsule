@@ -19,7 +19,7 @@ public class LoginService {
 	}
 	
 	
-	public int login(String u_id, String u_pw, HttpSession hs) {
+	public String login(String u_id, String u_pw, HttpSession hs) {
 		String id = loginMapper.checkLogin(u_id).getU_id();
 		UserDTO user = loginMapper.checkLogin(u_id);
 
@@ -28,13 +28,13 @@ public class LoginService {
 				System.out.println("로그인 성공");
 				hs.setMaxInactiveInterval(3600);
 				hs.setAttribute("user", user);
-				return 1;
+				return "success";
 			} else {
 				System.out.println("비밀번호 오류");
-				return 0;
+				return "false";
 			}
 		}
-		return 0;
+		return "false";
 	}
 
 	public int signUp(UserDTO userDTO) {
