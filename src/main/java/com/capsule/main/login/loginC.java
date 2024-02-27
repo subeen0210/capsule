@@ -31,7 +31,7 @@ public class loginC {
 	@PostMapping("/login")
 
 	public String login(@RequestParam("u_id") String u_id, @RequestParam("u_pw") String u_pw, HttpSession hs) {
-		if (loginService.login(u_id, u_pw, hs) == 1) {
+		if (loginService.login(u_id, u_pw, hs).equals("success")) {
 			return "success";
 		} else {
 			return "false";
