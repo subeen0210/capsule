@@ -44,60 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	})
 
 
-	//	document.querySelector('#modal-btn').addEventListener("click", (e) => {
-	//		const form = e.target.closest('form');
-	//		console.log(form);
-	//
-	//		const formData = new FormData(form);
-	//		for (const val of formData.values()) {
-	//			console.log(val);
-	//		}
-	//
-	//		fetch("/happy-capsule/write", {
-	//			method: 'POST',
-	//			body: formData
-	//		})
-	//			.then(response => {
-	//				console.log(response);
-	//			})
-	//
-	//	});
-
-
-
 });
 
 
-//document.addEventListener("DOMContentLoaded", function() {
-//	document.querySelector("#modal-btn").addEventListener("click", (e) => {
-//		const form = e.target.closest('form');
-//		console.log(form)
-//		// FormData 객체 생성
-//		const formData = new FormData(form);
-//
-//		// FormData 객체를 이용하여 입력된 값들을 가져옴
-//		for (let [key, value] of formData.entries()) {
-//			console.log(key + ': ' + value);
-//		}
-//		try {
-//			fetch('/happy-capsule/write', {
-//				method: 'POST',
-//				body: formData
-//			})
-//				.then(response => response.json())
-//				.then(data => {
-//					console.log(data); // 응답 데이터 출력
-//					location.href = '/happy-capsule/bottle/' + data;
-//				})
-//
-//
-//
-//		} catch (error) {
-//			console.error('오류가 발생했습니다:', error.message);
-//		}
-//
-//	})
-//});
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -115,14 +64,43 @@ document.addEventListener("DOMContentLoaded", function() {
 			console.log(bottlePk)
 		}
 		
+		var message = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
+              "♡  오늘의 행복 키워드를 ♡\n" +
+              "♡  입력해주세용♡\n" +
+              "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+              "                 O °\n" +
+              "  〃∩　∧＿∧\n" +
+              "⊂⌒（ ´・ω・）\n" +
+              "            ヽ_っ＿/￣￣￣/\n" +
+              "          　 　 ＼/＿＿＿/";
+              
+		var message2 = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
+              "♡  오늘의 행복했던 하루를 ♡\n" +
+              "♡  입력해주세용♡\n" +
+              "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+              "                 O °\n" +
+              "  〃∩　∧＿∧\n" +
+              "⊂⌒（ ´・ω・）\n" +
+              "            ヽ_っ＿/￣￣￣/\n" +
+              "          　 　 ＼/＿＿＿/";
+              
+		var message3 = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
+              "♡  3MB 이하의 파일을 ♡\n" +
+              "♡  선택해주세용♡\n" +
+              "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+              "                 O °\n" +
+              "  〃∩　∧＿∧\n" +
+              "⊂⌒（ ´・ω・）\n" +
+              "            ヽ_っ＿/￣￣￣/\n" +
+              "          　 　 ＼/＿＿＿/";
 		
 		if (keyword === "") {
-			alert('오늘의 행복 키워드를 입력해주세요');
+			alert(message);
 			return;
 		}
 
 		if (text === "") {
-			alert('오늘의 행복을 입력해주세요');
+			alert(message2);
 			return;
 		}
 
@@ -130,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		if (file.size > maxSizeInBytes) {
 			console.log(file.size);
-			alert("3MB 이하의 파일을 선택해주세요.");
+			alert("message3");
 			return;
 		}
 
