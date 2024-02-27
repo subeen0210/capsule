@@ -18,10 +18,10 @@ $(function() {
             url: '/happy-capsule/login', // 로그인 요청 URL
             data: { u_id: u_id, u_pw: u_pw }, // 아이디와 비밀번호 데이터 전송
             success: function(response) {
-                if (response === '1') {
+                if (response === 'success') {
                     // 로그인 성공 시 shelf 페이지로 리다이렉트
 alert("┌─────────────────────┐\n         로그인 성공! 오늘의 행복을 저금해 보세요 ♥\n└─────────────────────┘\n　　ᕱ ᕱ ||\n　 ( ･ω･ ||\n　 /　つΦ");
-
+					
                     window.location.href = '/happy-capsule/shelf';
                 } else {
                     // 로그인 실패 시 alert 창 표시

@@ -34,7 +34,6 @@ $(function() {
 					$("#backLogin").css("display", "none");
 					$(".find-input-box").css("justify-content","space-between");
 					$("#find-result").css("display", "flex");
-					console.log(data.u_id);
 					$("#find-id").text(maskId);
 					$("#find-pw").text(maskPw);
 					$("#find-name").text(maskName);
