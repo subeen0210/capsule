@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function() {
 				console.log(file.size);
 				alert("message3");
 				return;
-			} formData.append('file', file);
-		} formData.append('file', '');
+			} 
+		} 
 
 		for (let [key, value] of formData.entries()) {
 			console.log(key + ': ' + value);
