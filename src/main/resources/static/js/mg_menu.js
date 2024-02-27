@@ -51,5 +51,8 @@ function foldingMenu() {
 	} else if (window.location.pathname.includes('/bottle')) {
 		document.querySelector('.go-home-icon').style.display = 'none';
 		//		document.querySelector('.go-write-icon').style.display = 'none';
+	} else if (window.location.pathname.includes('/open')) {
+		document.querySelector('.go-home-icon').style.display = 'none';
+		document.querySelector('.do-write').style.display = 'none';
 	}
 }
