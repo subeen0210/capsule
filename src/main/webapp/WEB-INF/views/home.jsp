@@ -33,7 +33,7 @@
 			
 			<div class="do-write menu-list">
 			<c:choose>
-			<c:when test="${num_m_no == 3 }">
+			<c:when test="${num_m_no == 20 }">
 				<div class="go-open-icon">
 					<img class="menu-icon" src="/img/memo_white.png">
 					<div class="menu-txt">저금통열기</div>
