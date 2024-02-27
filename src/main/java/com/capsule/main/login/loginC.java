@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -29,12 +28,11 @@ public class loginC {
 	// 일치 시 메인 홈으로 이동
 	@ResponseBody
 	@PostMapping("/login")
-
-	public String login(@RequestParam("u_id") String u_id, @RequestParam("u_pw") String u_pw, HttpSession hs) {
-		if (loginService.login(u_id, u_pw, hs).equals("success")) {
-			return "success";
+	public int login(@RequestParam("u_id") String u_id, @RequestParam("u_pw") String u_pw, HttpSession hs) {
+		if (loginService.login(u_id, u_pw, hs) == 1) {
+			return 1;
 		} else {
-			return "false";
+			return 0;
 		}
 	}
 
@@ -50,6 +48,7 @@ public class loginC {
 		UserDTO findUser = loginService.checkMail(u_email);
 		return findUser;
 	}
+	
 
 	@GetMapping("/join")
 	public String goJoin() {
@@ -77,5 +76,6 @@ public class loginC {
 	public UserDTO checkMail(@RequestParam("u_email") String u_email) {
 		return loginService.checkMail(u_email);
 	}
+
 
 }
