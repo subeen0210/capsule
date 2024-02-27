@@ -56,44 +56,44 @@ document.addEventListener("DOMContentLoaded", function() {
 		let text = document.querySelector("textarea[name=m_text]").value.trim();
 		let file = document.getElementById("file-upload").files[0];
 		let maxSizeInBytes = 3 * 1024 * 1024;
-		
+
 		let currentUrl = window.location.href;
 		let bottlePk = currentUrl.match(/\d+/);
-		if(bottlePk != null) {
+		if (bottlePk != null) {
 			document.querySelector("#b_no").value = bottlePk;
 			console.log(bottlePk)
 		}
-		
+
 		var message = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
-              "♡  오늘의 행복 키워드를 ♡\n" +
-              "♡  입력해주세용♡\n" +
-              "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
-              "                 O °\n" +
-              "  〃∩　∧＿∧\n" +
-              "⊂⌒（ ´・ω・）\n" +
-              "            ヽ_っ＿/￣￣￣/\n" +
-              "          　 　 ＼/＿＿＿/";
-              
+			"♡  오늘의 행복 키워드를 ♡\n" +
+			"♡  입력해주세용♡\n" +
+			"  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+			"                 O °\n" +
+			"  〃∩　∧＿∧\n" +
+			"⊂⌒（ ´・ω・）\n" +
+			"            ヽ_っ＿/￣￣￣/\n" +
+			"          　 　 ＼/＿＿＿/";
+
 		var message2 = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
-              "♡  오늘의 행복했던 하루를 ♡\n" +
-              "♡  입력해주세용♡\n" +
-              "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
-              "                 O °\n" +
-              "  〃∩　∧＿∧\n" +
-              "⊂⌒（ ´・ω・）\n" +
-              "            ヽ_っ＿/￣￣￣/\n" +
-              "          　 　 ＼/＿＿＿/";
-              
+			"♡  오늘의 행복했던 하루를 ♡\n" +
+			"♡  입력해주세용♡\n" +
+			"  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+			"                 O °\n" +
+			"  〃∩　∧＿∧\n" +
+			"⊂⌒（ ´・ω・）\n" +
+			"            ヽ_っ＿/￣￣￣/\n" +
+			"          　 　 ＼/＿＿＿/";
+
 		var message3 = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
-              "♡  3MB 이하의 파일을 ♡\n" +
-              "♡  선택해주세용♡\n" +
-              "  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
-              "                 O °\n" +
-              "  〃∩　∧＿∧\n" +
-              "⊂⌒（ ´・ω・）\n" +
-              "            ヽ_っ＿/￣￣￣/\n" +
-              "          　 　 ＼/＿＿＿/";
-		
+			"♡  3MB 이하의 파일을 ♡\n" +
+			"♡  선택해주세용♡\n" +
+			"  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+			"                 O °\n" +
+			"  〃∩　∧＿∧\n" +
+			"⊂⌒（ ´・ω・）\n" +
+			"            ヽ_っ＿/￣￣￣/\n" +
+			"          　 　 ＼/＿＿＿/";
+
 		if (keyword === "") {
 			alert(message);
 			return;
@@ -106,17 +106,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-		if (file.size > maxSizeInBytes) {
-			console.log(file.size);
-			alert("message3");
-			return;
-		}
-
 		const formData = new FormData(document.querySelector('form'));
+		if (file != null) {
+			if (file.size > maxSizeInBytes) {
+				console.log(file.size);
+				alert("message3");
+				return;
+			} formData.append('file', file);
+		} formData.append('file', '');
+
 		for (let [key, value] of formData.entries()) {
 			console.log(key + ': ' + value);
 		}
-	
+
 		try {
 			fetch('/happy-capsule/write', {
 				method: 'POST',
@@ -130,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		} catch (error) {
 			console.error('오류가 발생했습니다:', error.message);
 		}
-	 
+
 	});
 });
 
