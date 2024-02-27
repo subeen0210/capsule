@@ -45,9 +45,9 @@ public class MemoDAO {
 	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
 	    try {
 	        System.out.println(memoDTO);
-	        
+	        System.out.println(memoDTO.getM_file().getSize());
 	        // 파일이 null이 아닌 경우에만 파일 업로드 처리 수행
-	        if (memoDTO.getM_file() != null) {
+	        if (memoDTO.getM_file().getSize() != 0) {
 	            FileInputStream serviceAccount = new FileInputStream("src/main/resources/serviceKey.json");
 
 	            if (FirebaseApp.getApps().isEmpty()) {
@@ -84,8 +84,8 @@ public class MemoDAO {
 	            
 	            memoDTO.setM_pic(publicUrl);
 	        } else {
-	            // 파일이 없는 경우 null 또는 다른 기본값으로 설정
-	            memoDTO.setM_pic(null);
+	            // 파일이 없는 경우 null로 설정
+	            memoDTO.setM_pic("");
 	        }
 	        
 	        if(memoDTO.getB_no()==0) {
@@ -97,7 +97,7 @@ public class MemoDAO {
 	        } else if (memoDTO.getB_no() != 0) {
 	            
 	        }
-	        
+	        System.out.println("---->>" + memoDTO);
 	        mMapper.insertMemo(memoDTO);
 	        System.out.println("================ pk : " + bottlePk);
 	        return bottlePk;
@@ -107,6 +107,7 @@ public class MemoDAO {
 	    }
 	    return 0;
 	}
+	
 
 	
 	public void countMemo(Model model, int no) {
