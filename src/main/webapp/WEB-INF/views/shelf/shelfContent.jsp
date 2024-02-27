@@ -29,7 +29,7 @@
 					<!-- 					<button onclick="shelfListJson(this)" value="sb">sb.json</button> -->
 					<!-- 					<button onclick="shelfListJson(this)" value="rh">rh.json</button> -->
 					<!-- 					<div class="title-txt">ㅇㅇㅇ님의 행복 저금통</div> -->
-					<div class="title-txt">${user.u_name }님의행복저금통</div>
+					<div class="title-txt">${user.u_name } 님의 행복 저금통</div>
 				</div>
 			</div>
 			<div class="shelf shelf-paging-1">
