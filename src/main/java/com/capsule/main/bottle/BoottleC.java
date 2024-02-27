@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+import com.capsule.main.login.LoginService;
 import com.capsule.main.memo.MemoDAO;
 import com.capsule.main.memo.MemoDTO;
-
 import java.util.List;
+
 
 
 @RequestMapping("/happy-capsule")
@@ -19,15 +21,18 @@ public class BoottleC  {
 
 
     @Autowired
-    private MemoDAO mDAO;
-
-    @Autowired
     private BottleDAO bDAO;
 
-
+    @Autowired
+    private MemoDAO mDAO;
     
+    @Autowired
+    private LoginService loginService;
     @GetMapping("/bottle/{no}")
-	public String bottle(Model model, @PathVariable("no") int no) {
+
+	public String bottle(Model model, @PathVariable int no) {
+    	if(loginService.loginCheck()) {
+    	mDAO.countMemo(model ,no);
 		model.addAttribute("content", "/WEB-INF/views/bottle/bottleContent.jsp");
 		List<MemoDTO> memoList = mDAO.getMemoList(no);
         model.addAttribute("memoList", memoList);
@@ -35,6 +40,8 @@ public class BoottleC  {
         int memoCount = memoList.size();
         model.addAttribute("memoCount", memoCount);
 		return "home";
+    	}
+    	return "redirect:/happy-capsule";
 	}
 
 	

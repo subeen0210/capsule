@@ -180,6 +180,10 @@
 	position: relative;
 }
 
+.bottle-space:hover {
+	cursor: pointer;
+}
+
 /* 병 이미지 크기 */
 .bottle-img {
 	/* 	border: 1px solid black; */

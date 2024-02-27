@@ -44,76 +44,165 @@ document.addEventListener("DOMContentLoaded", function() {
 	})
 
 
-	document.querySelector('#modal-btn').addEventListener("click", (e) => {
-		const form = e.target.closest('form');
-		console.log(form);
-
-		const formData = new FormData(form);
-		for (const val of formData.values()) {
-			console.log(val);
-		}
-
-		fetch("/happy-capsule/write", {
-			method: 'POST',
-			body: formData
-		})
-			.then(response => {
-				console.log(response);
-			})
-
-	});
+	//	document.querySelector('#modal-btn').addEventListener("click", (e) => {
+	//		const form = e.target.closest('form');
+	//		console.log(form);
+	//
+	//		const formData = new FormData(form);
+	//		for (const val of formData.values()) {
+	//			console.log(val);
+	//		}
+	//
+	//		fetch("/happy-capsule/write", {
+	//			method: 'POST',
+	//			body: formData
+	//		})
+	//			.then(response => {
+	//				console.log(response);
+	//			})
+	//
+	//	});
 
 
 
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-	document.querySelector("#modal-btn").addEventListener("click", (e) => {
-		const form = e.target.closest('form');
-		console.log(form)
-		// FormData 객체 생성
-		const formData = new FormData(form);
+//document.addEventListener("DOMContentLoaded", function() {
+//	document.querySelector("#modal-btn").addEventListener("click", (e) => {
+//		const form = e.target.closest('form');
+//		console.log(form)
+//		// FormData 객체 생성
+//		const formData = new FormData(form);
+//
+//		// FormData 객체를 이용하여 입력된 값들을 가져옴
+//		for (let [key, value] of formData.entries()) {
+//			console.log(key + ': ' + value);
+//		}
+//		try {
+//			fetch('/happy-capsule/write', {
+//				method: 'POST',
+//				body: formData
+//			})
+//				.then(response => response.json())
+//				.then(data => {
+//					console.log(data); // 응답 데이터 출력
+//					location.href = '/happy-capsule/bottle/' + data;
+//				})
+//
+//
+//
+//		} catch (error) {
+//			console.error('오류가 발생했습니다:', error.message);
+//		}
+//
+//	})
+//});
 
-		// FormData 객체를 이용하여 입력된 값들을 가져옴
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.querySelector("#modal-btn").addEventListener("click", function() {
+		console.log('잘들어왔니??');
+		let keyword = document.getElementById("modal-title-input").value.trim();
+		let text = document.querySelector("textarea[name=m_text]").value.trim();
+		let file = document.getElementById("file-upload").files[0];
+		let maxSizeInBytes = 3 * 1024 * 1024;
+		
+		let currentUrl = window.location.href;
+		let bottlePk = currentUrl.match(/\d+/);
+		if(bottlePk != null) {
+			document.querySelector("#b_no").value = bottlePk;
+			console.log(bottlePk)
+		}
+		
+		
+		if (keyword === "") {
+			alert('오늘의 행복 키워드를 입력해주세요');
+			return;
+		}
+
+		if (text === "") {
+			alert('오늘의 행복을 입력해주세요');
+			return;
+		}
+
+
+
+		if (file.size > maxSizeInBytes) {
+			console.log(file.size);
+			alert("3MB 이하의 파일을 선택해주세요.");
+			return;
+		}
+
+		const formData = new FormData(document.querySelector('form'));
 		for (let [key, value] of formData.entries()) {
 			console.log(key + ': ' + value);
 		}
+	
 		try {
 			fetch('/happy-capsule/write', {
 				method: 'POST',
 				body: formData
 			})
-			.then(response => response.json())
-			.then(data => {
+				.then(response => response.json())
+				.then(data => {
 					console.log(data); // 응답 데이터 출력
-					location.href='/happy-capsule/bottle/'+data;
-			})
-
-
-
+					location.href = '/happy-capsule/bottle/' + data;
+				});
 		} catch (error) {
 			console.error('오류가 발생했습니다:', error.message);
 		}
-
-	})
+	 
+	});
 });
 
 
-function preview() {
-    let fileImg = document.querySelector("input[name=m_file]");
-    let imgTag = document.getElementById("modal-img-show");
 
-    if (fileImg.files && fileImg.files[0]) {
-        let reader = new FileReader();
-        reader.onload = function(event) {
-            console.log(event);
-            imgTag.src = event.target.result;
-            imgTag.style.display = "block";
-            imgTag.height = 300;
-        }
-        reader.readAsDataURL(fileImg.files[0]);
-    } else {
-        imgTag.src = "";
-    }
+
+
+function preview() {
+	let fileImg = document.querySelector("input[name=m_file]");
+	let imgTag = document.getElementById("modal-img-show");
+
+	if (fileImg.files && fileImg.files[0]) {
+		let reader = new FileReader();
+		reader.onload = function(event) {
+			console.log(event);
+			imgTag.src = event.target.result;
+			imgTag.style.display = "block";
+			imgTag.height = 300;
+		}
+		reader.readAsDataURL(fileImg.files[0]);
+	} else {
+		imgTag.src = "";
+	}
 }
+
+
+//document.getElementById("modal-btn").addEventListener("click", function() {
+//
+//	console.log('잘들어왔니??');
+//	let keyword = document.getElementById("modal-title-input").value.trim();
+//	let text = document.querySelector("textarea[name=m_text]").value.trim();
+//
+//
+//	if (keyword === "") {
+//		alert('오늘의 행복 키워드를 입력해주세요');
+//		return;
+//	}
+//
+//	if (text === "") {
+//		alert('오늘의 행복을 입력해주세요')
+//		return;
+//	}
+//
+//	const file = document.getElementById("file-upload").files[0];
+//	const maxSizeInBytes = 5 * 1024 * 1024; // 5MB를 넘는지 확인
+//
+//	if (file && file.size > maxSizeInBytes) {
+//		alert("파일의 크기가 너무 큽니다. 5MB 이하의 파일을 선택해주세요.");
+//		return; // 파일 크기가 너무 큰 경우 함수 종료
+//	}
+//
+//
+//});

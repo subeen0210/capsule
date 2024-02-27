@@ -8,11 +8,6 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface BottleMapper {
 
-    
-
-
-    
-    
         
     @Select("select * from happy_bottle where b_no=#{no}")
 	BottleDTO getBottle(int no);
