@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpSession;
 @Mapper
 public interface MemoMapper {
 
-    @Select("SELECT * FROM happy_memo WHERE b_no = #{no}")
+    @Select("SELECT * FROM happy_memo WHERE b_no = #{no} order by m_no ASC")
 	List<MemoDTO> getMemoList(@Param("no") int no);
 
     @Select("Select * from happy_memo where m_no=#{no}")
