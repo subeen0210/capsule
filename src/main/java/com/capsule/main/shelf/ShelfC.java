@@ -40,6 +40,7 @@ public class ShelfC {
 			UserDTO loginUser = (UserDTO) hs.getAttribute("user");
 			String id = loginUser.getU_id();
 			System.out.println(id);
+			sDAO.getFirstBottle(model ,id);
 			model.addAttribute("bottleList", sDAO.getShelfList(id));
 			model.addAttribute("content", "shelf/shelfContent.jsp");
 			return "home";

@@ -16,5 +16,8 @@ public interface ShelfMapper {
 	
 	@Select("Select * from happy_memo where b_no=#{no}")
 	List<MemoDTO> getBottleMemo(@Param("no") int no);
+
+	@Select("select b_no from happy_bottle where b_date = (select max(b_date) from happy_bottle where u_id = #{id})")
+	int getFirstBottle(String id);
 	
 }

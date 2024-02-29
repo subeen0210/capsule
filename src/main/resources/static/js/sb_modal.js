@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function() {
 				console.log(file.size);
 				alert("message3");
 				return;
-			} formData.append('file', file);
-		} formData.append('file', '');
+			} 
+		} 
 
 		for (let [key, value] of formData.entries()) {
 			console.log(key + ': ' + value);
@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			})
 				.then(response => response.json())
 				.then(data => {
+					console.log("--------");
 					console.log(data); // 응답 데이터 출력
 					location.href = '/happy-capsule/bottle/' + data;
 				});
