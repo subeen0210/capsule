@@ -15,35 +15,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // 모달창 띄우기와 끄기 
 document.addEventListener("DOMContentLoaded", function() {
-	// 작성하기 아이콘과 텍스트 요소를 가져옴
-	//	console.log(11);
-	let modalOverlay = document.querySelector('.modal-overlay');
-	let writeIcon = document.querySelector(".go-write-icon");
-	let writeText = document.querySelector(".menu-txt");
-	let closeModal = document.querySelector("#cancle-botton");
+    let modalOverlay = document.querySelector('.modal-overlay');
+    let writeIcon = document.querySelector(".go-write-icon");
+    let writeText = document.querySelector(".menu-txt");
+    let closeModal = document.querySelector("#cancle-botton");
+    let modal = document.querySelector(".modal-container");
 
-	// 모달 요소를 가져옴
-	let modal = document.querySelector(".modal-container");
+    function showModal() {
+        modal.style.display = "block";
+        modalOverlay.style.display = 'block';
+    }
 
-	// 작성하기 아이콘 또는 텍스트를 클릭했을 때 모달을 보여주는 함수
-	function showModal() {
-		console.log(11);
-		modal.style.display = "block";
-		modalOverlay.style.display = 'block';
-	}
+    function hideModal() {
+        modal.style.display = 'none';
+        modalOverlay.style.display = 'none';
+    }
 
-	// 작성하기 아이콘 클릭 이벤트 리스너 추가
-	writeIcon.addEventListener("click", showModal);
+    writeIcon.addEventListener("click", showModal);
+    writeText.addEventListener("click", showModal);
+    closeModal.addEventListener("click", hideModal);
 
-	// 작성하기 텍스트 클릭 이벤트 리스너 추가
-	writeText.addEventListener("click", showModal);
-
-	closeModal.addEventListener("click", () => {
-		modal.style.display = 'none';
-		modalOverlay.style.display = 'none';
-	})
-
-
+    // ESC 키를 눌렀을 때 모달 창 닫기
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            hideModal();
+        }
+    });
 });
 
 
