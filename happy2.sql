@@ -1,4 +1,10 @@
 insert into memo VALUES(memo_seq.NEXTVAL, sysdate, 'test', 'testtesttesttest', 'aa.jpg', 13);
+insert into happy_memo VALUES(memo_seq.NEXTVAL,22, sysdate, 'test', 'testtesttesttest', null);
+insert into happy_memo values(happy_memo_seq.nextval, 22, sysdate, 'ttt','ttttt',null);
+
+
+select count(*) from happy_memo where b_no = 22;
+
 
 DELETE memo where b_no = 13;
 select * from memo;
