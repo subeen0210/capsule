@@ -19,7 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// 저금통 만들기 클릭
 	document.querySelector('.go-home-icon').addEventListener("click", function() {
-		location.href = '/happy-capsule/main';
+		let memoCount = document.getElementById("memoCount").value;
+		let message = "╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡◜◝╮\n" +
+			"♡  아직 작성 중인 저금통이 있습니다 ♡\n" +
+			"♡  20개를 채워주세요 ♡\n" +
+			"  ╰ ◟◞ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ͜ ◟◞ ͜ ◟ ͜ ◟ ╯\n" +
+			"                 O °\n" +
+			"  〃∩　∧＿∧\n" +
+			"⊂⌒（ ´・ω・）\n" +
+			"            ヽ_っ＿/￣￣￣/\n" +
+			"          　 　 ＼/＿＿＿/";
+			
+		if(parseInt(memoCount) < 20 ){
+			alert(message);
+		} else {
+			location.href = '/happy-capsule/main';
+		}
 	})
 
 
