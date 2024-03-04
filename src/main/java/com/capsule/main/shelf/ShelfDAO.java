@@ -44,14 +44,17 @@ public class ShelfDAO {
 
 	public void getFirstBottle(Model model, String id) {
 		System.out.println(id);
-		int no = sMapper.getFirstBottle(id);
-		int memoCount = mMapper.countMemo(no);
-		model.addAttribute("memoCount", memoCount);
+		Integer no = sMapper.getFirstBottle(id);
+		if(no != null) {
+			Integer memoCount = mMapper.countMemo(no);
+			model.addAttribute("memoCount", memoCount);
+		} else {
+			int memoCount = 0;
+			model.addAttribute("memoCount", memoCount);
+		}
 	}
-	
+
 //	public void selectFirstBottle() {
 //		sMapper.selectFirstBottle();
 //	}
-	
-	
 }
