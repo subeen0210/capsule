@@ -40,6 +40,7 @@
 					</div>
 					<div id="tape"></div>
 					<div class="modal-img-show"></div>
+					 <div class="no-image-mark">이미지 없음</div>
 					<div class="main-textarea">
 						<div class="modal-textarea"></div>
 					</div>

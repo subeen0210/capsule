@@ -19,7 +19,6 @@ body {
 
 /* 전체div */
 .main-container{
-	border: blue solid 1px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -41,7 +40,6 @@ body {
 
 /* 글자부분 */
 #main-text{
-	border: green solid 1px;
 	margin-top: 70px;
 	margin-bottom: 30px;
 	font-family: 'KNPSKkomi-Regular00';
@@ -51,7 +49,6 @@ body {
 
 /* 유리병 아이콘 */
 .main-memo{
-	border: red solid 1px;
 	width: 80px;
 }
 .main-memo:hover{
@@ -193,4 +190,7 @@ cursor: pointer;
 	border-bottom: 1px solid black;
 }
 
-
+.no-image-mark {
+	display: none; /* 기본적으로 숨김 */
+	text-align: center;
+}

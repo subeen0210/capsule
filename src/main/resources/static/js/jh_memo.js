@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(data);
     document.querySelector('.modal-img-show').innerHTML = '';
     let modalTitleInput = document.querySelector('.modal-title');
-    let modalImgShow = document.querySelector('.modal-img-show');
     let modalDateInput = document.getElementById('modal-date-input');
     let modalTextarea = document.querySelector('.modal-textarea');
+    let modalImgShow = document.querySelector('.modal-img-show');
+    var noImageMark = document.querySelector(".no-image-mark");
+
     console.log(modalTitleInput);
     console.log(modalImgShow);
     console.log(modalDateInput);
@@ -29,6 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
     modalImgShow.innerHTML += "<img id='modal-img-show' src='"+data.m_pic+"'>"
     modalDateInput.textContent = data.m_date;
     modalTextarea.innerText = data.m_text;
+
+    console.log(data.m_pic); 
+
+    if (data.m_pic == null) {
+      modalImgShow.innerHTML = '';
+      document.querySelector(".no-image-mark").style.display = 'block';
+    } else {
+      document.querySelector(".no-image-mark").style.display = 'none';
+    }
 
     // 모달 열기
     modal.style.display = "block";
