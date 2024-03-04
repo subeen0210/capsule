@@ -30,11 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			"            ヽ_っ＿/￣￣￣/\n" +
 			"          　 　 ＼/＿＿＿/";
 			
-		if(parseInt(memoCount) < 20 ){
+		if(parseInt(memoCount) < 20 && parseInt(memoCount) > 0 ){
+			console.log(memoCount);
 			alert(message);
-		} else {
+		} else if(parseInt(memoCount) == 0){
 			location.href = '/happy-capsule/main';
 		}
+
 	})
 
 
