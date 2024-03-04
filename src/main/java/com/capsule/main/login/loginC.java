@@ -58,7 +58,6 @@ public class loginC {
 	// 회원가입하는 로직
 	// insert해 주고 login 페이지로 이동
 	// DTO가 null일 땐 join 페이지에 머물기
-	@ResponseBody
 	@PostMapping("/join")
 	public String join(UserDTO userDTO) {
 		loginService.signUp(userDTO);
