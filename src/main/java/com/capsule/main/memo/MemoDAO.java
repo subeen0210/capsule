@@ -44,8 +44,8 @@ public class MemoDAO {
 	
 	public int insertMemo(MemoDTO memoDTO, HttpSession hs) {
 	    try {
-	        System.out.println(memoDTO);
-	        System.out.println(memoDTO.getM_file().getSize());
+//	        System.out.println(memoDTO);
+//	        System.out.println(memoDTO.getM_file().getSize());
 	        // 파일이 null이 아닌 경우에만 파일 업로드 처리 수행
 	        if (memoDTO.getM_file().getSize() != 0) {
 	            FileInputStream serviceAccount = new FileInputStream("src/main/resources/serviceKey.json");
@@ -80,7 +80,7 @@ public class MemoDAO {
 	                    + saveFileName + "?alt=media";
 
 	            // 저장할 이미지 경로 - 요걸 m_pic에 insert하면 됨
-	            System.out.println("Public URL: " + publicUrl);
+//	            System.out.println("Public URL: " + publicUrl);
 	            
 	            memoDTO.setM_pic(publicUrl);
 	        } else {
@@ -94,12 +94,17 @@ public class MemoDAO {
 	                bottlePk = bMapper.curBottleNo();
 	                memoDTO.setB_no(bottlePk);
 	            }
-	        } else if (memoDTO.getB_no() != 0) {
+	        }
 	            
+	        else {
+	        	bottlePk = memoDTO.getB_no();
+	        	System.out.println("testing :" + bottlePk);
 	        }
 	        System.out.println("---->>" + memoDTO);
 	        mMapper.insertMemo(memoDTO);
-	        System.out.println("================ pk : " + bottlePk);
+	        System.out.println("-------------");
+	        System.out.println("pk : " + bottlePk);
+	        System.out.println("쪽지 들어감");
 	        return bottlePk;
 
 	    } catch (Exception e) {
@@ -112,6 +117,7 @@ public class MemoDAO {
 	
 	public void countMemo(Model model, int no) {
 		int count =  mMapper.countMemo(no);
+		System.out.println("--------------");
 		System.out.println("쪽지 개수 : " + count);
 		model.addAttribute("num_m_no", count);
 	}

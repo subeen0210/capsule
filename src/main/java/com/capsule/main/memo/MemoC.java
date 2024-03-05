@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.capsule.main.login.UserDTO;
+
+import jakarta.servlet.http.HttpSession;
+
 
 @RequestMapping("/happy-capsule")
 @Controller
@@ -17,12 +21,16 @@ public class MemoC {
     @Autowired
 	private MemoDAO mDAO;
 
+    @Autowired
+    private HttpSession hs;
     
     @GetMapping("/open/{no}")
 	public String bottleOpen(Model model, @PathVariable("no") int no) {
 		model.addAttribute("content", "/WEB-INF/views/memo/bottleOpen.jsp");
 		System.out.println(no);
+		UserDTO loginUser = (UserDTO) hs.getAttribute("user");
 		System.out.println(mDAO.getMemoList(no));
+		model.addAttribute("user", loginUser);
         model.addAttribute("memoList", mDAO.getMemoList(no));
 
 
