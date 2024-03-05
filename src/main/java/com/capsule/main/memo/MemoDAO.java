@@ -94,8 +94,11 @@ public class MemoDAO {
 	                bottlePk = bMapper.curBottleNo();
 	                memoDTO.setB_no(bottlePk);
 	            }
-	        } else if (memoDTO.getB_no() != 0) {
+	        }
 	            
+	        else {
+	        	bottlePk = memoDTO.getB_no();
+	        	System.out.println("testing :" + bottlePk);
 	        }
 	        System.out.println("---->>" + memoDTO);
 	        mMapper.insertMemo(memoDTO);
