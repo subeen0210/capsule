@@ -39,11 +39,16 @@ dependencies {
 
 	//oracle cloud
 	// https://mvnrepository.com/artifact/com.oracle.database.security/oraclepki
-	implementation group: 'com.oracle.database.security', name: 'oraclepki', version: '21.5.0.0'
+	implementation 'com.oracle.database.security:oraclepki:21.5.0.0'
 	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_cert
-	implementation group: 'com.oracle.database.security', name: 'osdt_cert', version: '21.5.0.0'
+	implementation 'com.oracle.database.security:osdt_cert:21.5.0.0'
 	// https://mvnrepository.com/artifact/com.oracle.database.security/osdt_core
-	implementation group: 'com.oracle.database.security', name: 'osdt_core', version: '21.5.0.0'
+	implementation 'com.oracle.database.security:osdt_core:21.5.0.0'
+	// firebase 사용
+	 implementation 'com.google.firebase:firebase-admin:7.2.0' // 버전은 최신 버전으로 변경 가능합니다.
+  // https://mvnrepository.com/artifact/com.google.cloud/google-cloud-storage
+implementation group: 'com.google.cloud', name: 'google-cloud-storage', version: '2.30.1'
+  
 }
 
 tasks.named('test') {
